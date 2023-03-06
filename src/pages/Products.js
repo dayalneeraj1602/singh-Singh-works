@@ -3,7 +3,7 @@ import React from "react";
 const Products = () => {
   return (
     <>
-    {/* =--------------------------Pit Pot Furnace------------------*/}
+      {/* ---------------Pit Pot Furnace--------------------------------- */}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -42,7 +42,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      {/* =--------------------------Roller Furnace------------------*/}
+      {/* =--------------------Roller Furnace----------------------------*/}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -78,7 +78,7 @@ const Products = () => {
             <br />
             <span className=""> Voltage (V) : </span> <span>230 V</span>
             <br />
-            <span className=""> Max OperatingTemperature : </span> 
+            <span className=""> Max OperatingTemperature : </span>
             <span>100 to 1200 degree C</span>
             <br />
             <span className="">Automation Grade : </span> <span>Automatic</span>
@@ -86,7 +86,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      { /* =--------------------------Gas Fire Furnace------------------------*/}
+      {/* =------------------------------------Gas Fire Furnace---------------*/}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -125,7 +125,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      { /* =--------------------------Open Forging Furnace------------------------*/}
+      {/* =-------------------Open Forging Furnace-------------------------*/}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -140,7 +140,7 @@ const Products = () => {
           </div>
           <div className="card-body col-7">
             <h2>Open Forging Furnace</h2>
-            <span className="">Rs 4 Lakhs / Unit</span>
+            <span className="">Rs 10 Lakhs / Unit</span>
             <br />
             <span className="">Melting Material : </span>
             <span>Copper</span>
@@ -164,7 +164,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      { /* =--------------------------Heat Treatment Furnace----------------------*/}
+      {/* =--------------------------Heat Treatment Furnace-------------------*/}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -179,16 +179,19 @@ const Products = () => {
           </div>
           <div className="card-body col-7">
             <h2>Heat Treatment Furnace</h2>
-            <span className="">Rs 4 Lakhs / Unit</span>
+            <span className="">Rs 10 Lakhs / Unit</span>
             <br />
             <span className="">Melting Material : </span>
-            <span>Copper</span>
+            <span>MS</span>
+            <br />
+            <span className="">Material Loading Capacity (T) : </span>
+            <span>1-2 Ton</span>
             <br />
             <span className="">Power Source : </span>
             <span>Electric</span>
             <br />
             <span className="">Type Of Furnace : </span>
-            <span>Tilt</span>
+            <span>fix</span>
             <br />
             <span className=""> Max Temperature : </span>
             <span>500-1000 degree Celsius</span>
@@ -203,7 +206,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      { /* =--------------------------Electric Roller Furnace---------------------  */}
+      {/* =--------------Electric Roller Furnace----------------------*/}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -218,7 +221,7 @@ const Products = () => {
           </div>
           <div className="card-body col-7">
             <h2>Electric Roller Furnace</h2>
-            <span className="">Rs 4 Lakhs / Unit</span>
+            <span className="">Rs 10 Lakhs / Unit</span>
             <br />
             <span className="">Melting Material : </span>
             <span>Copper</span>
@@ -242,7 +245,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      { /* =--------------------------Heat Treating And Forging Furnace----------  */}
+      {/* =---------------Heat Treating And Forging Furnace------------------*/}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -257,7 +260,7 @@ const Products = () => {
           </div>
           <div className="card-body col-7">
             <h2>Heat Treating And Forging Furnace</h2>
-            <span className="">Rs 4 Lakhs / Unit</span>
+            <span className="">Rs 10 Lakhs / Unit</span>
             <br />
             <span className="">Melting Material : </span>
             <span>Copper</span>
@@ -281,7 +284,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      { /* =--------------------------Open Forging Furnaces---------------------  */}
+      {/* ------------------------Open Forging Furnaces----------------------*/}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -296,7 +299,7 @@ const Products = () => {
           </div>
           <div className="card-body col-7">
             <h2>Open Forging Furnaces</h2>
-            <span className="">Rs 4 Lakhs / Unit</span>
+            <span className="">Rs 40,000 / Unit</span>
             <br />
             <span className="">Melting Material : </span>
             <span>Copper</span>
@@ -308,19 +311,19 @@ const Products = () => {
             <span>Tilt</span>
             <br />
             <span className=""> Max Temperature : </span>
-            <span>500-1000 degree Celsius</span>
+            <span>1000-1500 degree Celsius</span>
             <br />
             <span className="">Rated Power (KW) : </span>
-            <span>15 kW</span>
+            <span>30 kW</span>
             <br />
-            <span className="">Input Voltage (V) : </span> <span>415 V</span>
+            <span className="">Input Voltage (V) : </span> <span>440 V</span>
             <br />
             <span className="">Automation Grade : </span> <span>Automatic</span>
             <br />
           </div>
         </div>
       </div>
-      { /* =--------------------------Industrial Heat Treatment Furnace-----------  */}
+      {/* ---------------------Industrial Heat Treatment Furnace--------------*/}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -335,7 +338,7 @@ const Products = () => {
           </div>
           <div className="card-body col-7">
             <h2>Industrial Heat Treatment Furnace</h2>
-            <span className="">Rs 4 Lakhs / Unit</span>
+            <span className="">Rs 10 Lakhs / Unit</span>
             <br />
             <span className="">Melting Material : </span>
             <span>Copper</span>
@@ -359,7 +362,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      { /* =--------------------------High Temperature Muffle Furnace-----------  */}
+      {/*--------------High Temperature Muffle Furnace------------------------*/}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -375,10 +378,10 @@ const Products = () => {
           </div>
           <div className="card-body col-7">
             <h2>High Temperature Muffle Furnace</h2>
-            <span className="">Rs 4 Lakhs / Unit</span>
+            <span className="">Rs 80000 / Unit</span>
             <br />
             <span className="">Melting Material : </span>
-            <span>Copper</span>
+            <span>Ms</span>
             <br />
             <span className="">Power Source : </span>
             <span>Electric</span>
@@ -399,7 +402,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      { /* =--------------------------Industrial Heat Treatment Furnaces--------  */}
+      {/* -------------Industrial Heat Treatment Furnaces-------------------*/}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -414,7 +417,7 @@ const Products = () => {
           </div>
           <div className="card-body col-7">
             <h2>Industrial Heat Treatment Furnaces</h2>
-            <span className="">Rs 4 Lakhs / Unit</span>
+            <span className="">Rs 7 Lakhs / Unit</span>
             <br />
             <span className="">Melting Material : </span>
             <span>Copper</span>
@@ -438,7 +441,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      { /* =--------------------------Salt Bath Furnace------------------------  */}
+      {/* -------------------------Salt Bath Furnace-----------------------*/}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -454,7 +457,7 @@ const Products = () => {
           </div>
           <div className="card-body col-7">
             <h2>Salt Bath Furnace</h2>
-            <span className="">Rs 4 Lakhs / Unit</span>
+            <span className="">Rs 5 Lakhs / Unit</span>
             <br />
             <span className="">Melting Material : </span>
             <span>Copper</span>
@@ -463,13 +466,16 @@ const Products = () => {
             <span>Electric</span>
             <br />
             <span className="">Type Of Furnace : </span>
-            <span>Tilt</span>
+            <span>fix</span>
             <br />
             <span className=""> Max Temperature : </span>
-            <span>500-1000 degree Celsius</span>
+            <span>1500-2000 degree Celsius</span>
             <br />
             <span className="">Rated Power (KW) : </span>
             <span>15 kW</span>
+            <br />
+            <span className=""> Power Comsumpstion (KW) : </span>
+            <span>50 kW</span>
             <br />
             <span className="">Input Voltage (V) : </span> <span>415 V</span>
             <br />
@@ -478,7 +484,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-      { /* =--------------------------MG Salt Bath Furnaces------------------  */}
+      {/* -------------------------MG Salt Bath Furnaces-----------------------*/}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -499,7 +505,7 @@ const Products = () => {
             <span>500-1500 Kg</span>
             <br />
             <span className="">Melting Material : </span>
-            <span>Copper</span>
+            <span>Copper/Zink</span>
             <br />
             <span className="">Power Source : </span>
             <span>Electric</span>
@@ -513,14 +519,14 @@ const Products = () => {
             <span className="">Rated Power (KW) : </span>
             <span>15 kW</span>
             <br />
-            <span className="">Input Voltage (V) : </span> <span>415 V</span>
+            <span className="">Input Voltage (V) : </span> <span>440 V</span>
             <br />
             <span className="">Automation Grade : </span> <span>Automatic</span>
             <br />
           </div>
         </div>
       </div>
-      { /* =--------------------------Box Furnaces------------------------  */}
+      {/* --------------------------Box Furnaces-------------------------------*/}
       <div className="container my-5 pop center">
         <div
           className="cards py-4 d-flex shadow-out p-2 center"
@@ -561,7 +567,7 @@ const Products = () => {
             <br />
           </div>
         </div>
-      </div>  
+      </div>
     </>
   );
 };
