@@ -1,19 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.navbar {
+  backdrop-filter: blur(3rem);
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
 }
-
-.pop {
-  font-family: "Poppins", sans-serif;
-}
-
 .logo {
   width: 4rem;
 }
-
+.navbar a {
+  color: black !important;
+}
 .shadow-out {
   border-color: #d1d9e6;
   box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
@@ -28,7 +25,7 @@ body {
   display: grid;
   place-items: center;
 }
-.curve{
+.curve {
   border-radius: 13px;
 }
 .product_images img {

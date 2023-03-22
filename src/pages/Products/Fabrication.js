@@ -1,13 +1,14 @@
 import React from "react";
-import "../styles/Services.css";
 import { Link } from "react-router-dom";
-const Services = () => {
+import '../../styles/Services.css'
+
+const Fabrication = () => {
   const dataInfo = [
     {
       id: 1,
       imgUrl:
         "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Furnace",
+      productTitle: "Hello",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
       ShowProducts: "/services/furnace",
@@ -25,47 +26,12 @@ const Services = () => {
       id: 3,
       imgUrl:
         "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Leath",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      ShowProducts: "/services/leath",
-    },
-    {
-      id: 4,
-      imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Dc Motor & Panel",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      ShowProducts: "/services/dcmotor&panel",
-    },
-    {
-      id: 5,
-      imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Fabrication Works",
+      productTitle: "Fabrication Work",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
       ShowProducts: "/services/fabricationWork",
     },
-    {
-      id: 6,
-      imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Conveyor Belt",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      ShowProducts: "/services/conveyorBelt",
-    },
-    {
-      id: 7,
-      imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Ceramic Roller",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      ShowProducts: "/services/ceramic_roller",
-    },
+   
   ];
   return (
     <div className="container my-5 pop center">
@@ -103,4 +69,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Fabrication;

@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../styles/Navbar.css'
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light pop
+    <div className="navbar navbar-expand-lg navbar-light pop
     ">
 
       <Link className="navbar-brand ms-5 fw-bold fs-4 d-flex" to="/">  <div className="logo mx-2">
@@ -33,7 +34,7 @@ const Navbar = () => {
 
         </ul>
       </div>
-    </nav>
+    </div>
   )
 }
 
