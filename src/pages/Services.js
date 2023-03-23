@@ -82,9 +82,13 @@ const Services = () => {
             >
               <Link to={item.link} className="bg-grey ">
                 <motion.div
-                  initial={{ x: "100vw", opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.2, bounce: 0.2, type: "tween" }}
+                   initial={{
+                    x: item.id % 2 === 0 ? 0 : "100vw",
+                    y: item.id % 2 === 0 ? "-100vh" : 0,
+                    opacity: 0,
+                  }}
+                  animate={{ x: 0, y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, bounce: .57, type: "spring" }}
                   // style={{ height: "10rem" }}
                   whileHover={{ scale: 1.04 }}
                   className="card  m-3  border-none pointer shadow-out"
