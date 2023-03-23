@@ -11,7 +11,6 @@ const Fabrication = () => {
       productTitle: "Hello",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
-      ShowProducts: "/services/furnace",
     },
     {
       id: 2,
@@ -20,7 +19,6 @@ const Fabrication = () => {
       productTitle: "Fabrication Work",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
-      ShowProducts: "/services/fabricationWork",
     },
     {
       id: 3,
@@ -29,7 +27,6 @@ const Fabrication = () => {
       productTitle: "Fabrication Work",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
-      ShowProducts: "/services/fabricationWork",
     },
    
   ];
@@ -57,9 +54,7 @@ const Fabrication = () => {
                 <p className="ProductDescription mx-3">
                   {item.ProductDescription}
                 </p>
-                <Link to={item.ShowProducts} className="btn shadow-out  center">
-                  Show
-                </Link>
+               
               </div>
             </div>
           );
