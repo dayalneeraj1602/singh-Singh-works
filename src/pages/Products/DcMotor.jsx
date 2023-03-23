@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Services.css";
+import {motion} from 'framer-motion'
 
 const DcMotor = () => {
   const dataInfo = [
@@ -30,36 +31,6 @@ const DcMotor = () => {
     },
   ];
   return (
-    <div className="container my-5 pop center">
-      <div className="row">
-        {dataInfo.map((item) => {
-          return (
-            <div
-              key={item.id}
-              className="col-lg-4 center my-4 p-2 mx- col-md-6 col-sm-12"
-            >
-              <div
-                className="shadow-out curve p-4 cardServices"
-                style={{ width: "21rem " }}
-              >
-                <div className="center">
-                  <img
-                    className="img-fluid serviceCardImg curve my-3 "
-                    src={item.imgUrl}
-                    alt="productImg"
-                  />
-                </div>
-                <span className="center fs-3">{item.productTitle}</span>
-                <p className="ProductDescription mx-3">
-                  {item.ProductDescription}
-                </p>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-};
-
-export default DcMotor;
+    <div>DcMotor</div>
+  )
+}

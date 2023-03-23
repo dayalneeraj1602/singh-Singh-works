@@ -1,41 +1,66 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import '../styles/Navbar.css'
+import React ,{useState} from "react";
+import { Link } from "react-router-dom";
+import "../styles/Navbar.css";
 
 const Navbar = () => {
+  const [activeLink, setActiveLink] = useState("");
+  const [sidebarActive, setsidebarActive] = useState(false);
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+  
   return (
-    <div className="navbar navbar-expand-lg navbar-light pop
-    ">
-
-      <Link className="navbar-brand ms-5 fw-bold fs-4 d-flex" to="/">  <div className="logo mx-2">
-        <img src="/logosew.png" alt="logo" className='logo ' />
-      </div>Singh Engineering Works</Link>
-
-      <div className="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul className="navbar-nav">
-          <li className="nav-item active">
-            <Link className="nav-link" to="/" >Home </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/services">Services</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/about">About</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/contact">Contact Us</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/projects">Projects</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/allproducts">All Products</Link>
-          </li>
-
-        </ul>
+  
+    <div className="navbar d-flex shadow-out pop">
+      <div className="navbar-brand  d-inline-block fs-1 ls-2">
+        <Link className="navbar-brand brand ms-5 fw-bold fs-4 d-flex " to="/">
+          <div className="logo mx-2">
+            <img src="/logosew.png" alt="logo" className="logo " />
+          </div>
+          <span className="p-1">Singh Engineering Works</span>
+        </Link>
+      </div>
+      <div className="nav-items me-5">
+        <Link
+          to="/"
+          className={`links ${
+            activeLink === "home"
+              ? "stroke shadow-in px-3 py-2 roundedBorder"
+              : "stroke-grey"
+          }`}
+          title="Home"
+          onClick={() => handleLinkClick("home")}
+        >
+          <i class="fa-solid fa-house-chimney"></i>
+        </Link>
+        <Link
+          to="/services"
+          className={`links ${
+            activeLink === "truck"
+              ? "stroke shadow-in p-2 roundedBorder"
+              : "stroke-grey"
+          }`}
+          title="Services"
+          onClick={() => handleLinkClick("truck")}
+        >
+          <i className="fa-solid fa-truck p-2"></i>
+        </Link>
+        <Link
+          to="/cart"
+          className={`links ${
+            activeLink === "phone"
+              ? "stroke shadow-in p-2 roundedBorder"
+              : "stroke-grey"
+          }`}
+          title="Contact Us"
+          onClick={() => handleLinkClick("phone")}
+        >
+          <i className="fa-solid  p-2 fa-phone-volume"></i>
+        </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

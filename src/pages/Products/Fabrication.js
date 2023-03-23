@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../../styles/Services.css'
+import "../../styles/Services.css";
+import {motion} from 'framer-motion'
 
 const Fabrication = () => {
   const dataInfo = [
@@ -28,16 +29,17 @@ const Fabrication = () => {
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
     },
-   
   ];
   return (
-    <div className="container my-5 pop center">
-      <div className="row">
-        {dataInfo.map((item) => {
-          return (
-            <div
+    <div className="row my-5 pop container center cardsServices">
+      <div className="col-12 center">
+        <span className="center fs-2  stroke p-1 ls-2">Fabrication Works</span>
+        <div className="row">
+          {dataInfo.map((item) => {
+            return (
+              <div
+              className="col-lg-4 my-1 col-md-6 col-sm-12"
               key={item.id}
-              className="col-lg-4 center my-4 p-2 mx- col-md-6 col-sm-12"
             >
               <div
                 className="shadow-out curve p-4 cardServices"
@@ -54,7 +56,9 @@ const Fabrication = () => {
                 <p className="ProductDescription mx-3">
                   {item.ProductDescription}
                 </p>
-               
+                <Link to={item.ShowProducts} className="btn shadow-out  center">
+                  Show
+                </Link>
               </div>
             </div>
           );
