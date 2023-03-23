@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Services.css";
 import {motion} from 'framer-motion'
+import "../../styles/Services.css";
 
 const Leath = () => {
   const dataInfo = [
