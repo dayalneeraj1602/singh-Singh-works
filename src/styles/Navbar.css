@@ -4,27 +4,53 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 111;
 }
 .logo {
   width: 4rem;
 }
-.navbar a {
-  color: black !important;
+
+.nav-items a {
+  padding: 0.2rem;
 }
-.shadow-out {
-  border-color: #d1d9e6;
-  box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+.nav-items a:active {
+  box-shadow: var(--shadow-out);
+  padding: 0.4rem;
+  border-radius: 45%;
+}
+.nav-items a:hover {
+  color: var(--primary-light);
+}
+.navbar .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem;
+}
+.brand {
+  text-decoration: none;
+  color: black;
+  transition: .3s ease;
+}
+.brand:focus,
+.brand:active {
+  outline: none;
+  border: none;
+}
+.brand:hover {
+  color: var(--primary-dark);
+}
+.links {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0rem 3rem;
+  text-decoration: none;
+  transition: 0.1s ease-out;
 }
 
-.shadow-in {
-  border-color: #d1d9e6;
-  box-shadow: inset 3px 3px 6px #b8b9be, inset -3px -3px 6px #fff;
-  /* border: none; */
-}
-.center {
-  display: grid;
-  place-items: center;
-}
 .curve {
   border-radius: 13px;
 }

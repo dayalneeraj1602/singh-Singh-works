@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '../../styles/Services.css'
+import "../../styles/Services.css";
+import {motion} from 'framer-motion'
 
 const Fabrication = () => {
   const dataInfo = [
@@ -11,7 +12,6 @@ const Fabrication = () => {
       productTitle: "Hello",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
-      ShowProducts: "/services/furnace",
     },
     {
       id: 2,
@@ -20,7 +20,6 @@ const Fabrication = () => {
       productTitle: "Fabrication Work",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
-      ShowProducts: "/services/fabricationWork",
     },
     {
       id: 3,
@@ -29,41 +28,50 @@ const Fabrication = () => {
       productTitle: "Fabrication Work",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
-      ShowProducts: "/services/fabricationWork",
     },
-   
   ];
   return (
-    <div className="container my-5 pop center">
-      <div className="row">
-        {dataInfo.map((item) => {
-          return (
-            <div
-              key={item.id}
-              className="col-lg-4 center my-4 p-2 mx- col-md-6 col-sm-12"
-            >
+    <div className="row my-5 pop container center cardsServices">
+      <div className="col-12 center">
+        <span className="center fs-2  stroke p-1 ls-2">Fabrication Works</span>
+        <div className="row">
+          {dataInfo.map((item) => {
+            return (
               <div
-                className="shadow-out curve p-4 cardServices"
-                style={{ width: "21rem " }}
-              >
-                <div className="center">
-                  <img
-                    className="img-fluid serviceCardImg curve my-3 "
-                    src={item.imgUrl}
-                    alt="productImg"
-                  />
-                </div>
-                <span className="center fs-3">{item.productTitle}</span>
-                <p className="ProductDescription mx-3">
-                  {item.ProductDescription}
-                </p>
-                <Link to={item.ShowProducts} className="btn shadow-out  center">
-                  Show
-                </Link>
-              </div>
+              className="col-lg-4 my-1 col-md-6 col-sm-12"
+              key={item.id}
+            >
+              <Link to={item.link} className="bg-grey ">
+                <motion.div
+                  initial={{ y: "-100vw", opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.2, bounce: 0.2, type: "tween" }}
+                  // style={{ height: "10rem" }}
+                  whileHover={{ scale: 1.04 }}
+                  className="card  m-3  border-none pointer shadow-out"
+                >
+                  <div className="card-body bg-grey border-none py-4">
+                    <div className="center p-2 m-2 serviceCardImg shadow-in my-3">
+                      <img
+                        className="img-fluid p-2 "
+                        src={item.imgUrl}
+                        alt="productImg"
+                      />
+                    </div>
+
+                    <div className="card-title center fs-5 dim">
+                      {item.productTitle}
+                    </div>
+                    <p className="card-text px-3 text-secondary">
+                      {item.ProductDescription}
+                    </p>
+                  </div>
+                </motion.div>
+              </Link>
             </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

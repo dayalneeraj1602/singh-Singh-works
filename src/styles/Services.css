@@ -1,14 +1,17 @@
 .cardsServices {
   display: flex;
   flex-direction: column;
-  margin: 1rem 2rem;
+  margin: 1rem auto;
   border-radius: 10px;
-}
-.cardsServices img {
-  border-radius: 10px;
-  /* padding: 1rem 1rem; */
 }
 .serviceCardImg{
-
+  border-radius: 6px;
 }
-
+.cardsServices a{
+  text-decoration: none;
+}
+.cardsServices img {
+  border-radius: 6px;
+  width: 20rem;
+  box-shadow: var(--shadow-out);
+}
