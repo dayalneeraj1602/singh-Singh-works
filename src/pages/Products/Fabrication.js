@@ -48,9 +48,9 @@ const Fabrication = () => {
                     transition={{ duration: 0.7, bounce: 0.5, type: "spring" }}
                     // style={{ height: "10rem" }}
                     whileHover={{ scale: 1.04 }}
-                    className="card  m-3  border-none pointer shadow-out"
+                    className="card  m-3 b-20   border-none pointer shadow-out"
                   >
-                    <div className="card-body bg-grey border-none py-4">
+                    <div className="card-body  b-20 bg-grey border-none py-4">
                       <div className="center p-2 m-2 serviceCardImg shadow-in my-3">
                         <img
                           className="img-fluid p-2 "
