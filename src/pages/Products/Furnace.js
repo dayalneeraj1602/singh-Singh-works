@@ -92,9 +92,12 @@ const Products = () => {
             {data.map((item) => (
               <div className="col-12 col-md-6 col-lg-4 my-3">
                 <motion.div
-                  initial={{ y: "100vw", opacity: 0 }}
+                   initial={{
+                    y: item.id % 2 === 0 ? "-100vh" : "100vh",
+                    opacity: 0,
+                  }}
                   animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.2, bounce: 0.2, type: "tween" }}
+                  transition={{ duration: 0.7, bounce: 0.5, type: "spring" }}
                   // style={{ height: "10rem" }}
                   whileHover={{ scale: 1.04 }}
                   className="card shadow-out bg-grey py-3 px-2"

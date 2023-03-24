@@ -80,16 +80,20 @@ const Services = () => {
               className="col-lg-4 my-1 col-md-6 col-sm-12"
               key={item.id}
             >
-              <Link to={item.link} className="bg-grey ">
+              <Link to={item.link} className="b-20 bg-grey ">
                 <motion.div
-                  initial={{ x: "100vw", opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.2, bounce: 0.2, type: "tween" }}
+                   initial={{
+                    x: item.id % 2 === 0 ? 0 : "100vw",
+                    y: item.id % 2 === 0 ? "-100vh" : 0,
+                    opacity: 0,
+                  }}
+                  animate={{ x: 0, y: 0, opacity: 1 }}
+                  transition={{ duration: 0.5, bounce: .57, type: "spring" }}
                   // style={{ height: "10rem" }}
                   whileHover={{ scale: 1.04 }}
-                  className="card  m-3  border-none pointer shadow-out"
+                  className="card  m-3 b-20 border-none pointer shadow-out"
                 >
-                  <div className="card-body bg-grey border-none py-4">
+                  <div className="card-body b-20 bg-grey border-none py-4">
                     <div className="center p-2 m-2 serviceCardImg shadow-in my-3">
                       <img
                         className="img-fluid p-2 "

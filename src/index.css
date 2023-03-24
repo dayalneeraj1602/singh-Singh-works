@@ -7,7 +7,7 @@
   outline: none;
 }
 :root {
-  --primary-lighter: #bdc2ff;
+  --primary-lighter: #efbe6a;
   --primary-light: #ec9706;
   --primary: #fc6a03;
   --primary-dark: #dd571c;
@@ -40,13 +40,16 @@
   width: 2rem;
   border-radius: 10px;
 }
+.b-20{
+  border-radius: 20px;
+}
 .stroke-grey {
   font-weight: 700;
   text-transform: uppercase;
   background: -webkit-linear-gradient(-86deg, #000 5%, #000000 53%, #000 91%);
   -webkit-background-clip: text;
   -webkit-text-stroke: 4px transparent;
-  color: var(--greyDark);
+  color: var(--primary-lighter);
 }
 .stroke {
   font-weight: 700;

@@ -5,7 +5,7 @@ const Home = () => {
     <div className='container my-5'>
       <div className="row my-5">
         <div className="col-lg-6 col-sm-12 p-4">
-          <span className='stroke fs-1 p-2 ls-1 px-2'>Best Machinary Services in Noida  </span>
+          <div className='stroke fs-1 p-2 ls-1 px-2'>Best Machinary Services in Noida  </div>
         </div>
         <div className="home_img col-lg-5 col-sm-12">
 

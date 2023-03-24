@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Services.css";
 import {motion} from 'framer-motion'
-import { Link } from "react-router-dom";
 import "../../styles/Services.css";
 
 const Leath = () => {
@@ -45,10 +44,9 @@ const Leath = () => {
             >
               <Link to={item.link} className="bg-grey ">
                 <motion.div
-                  initial={{ y: "-100vw", opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.2, bounce: 0.2, type: "tween" }}
-                  // style={{ height: "10rem" }}
+                   initial={{  y: item.id % 2 === 0 ? "-100vw" : "100vw", opacity: 0 }}
+                   animate={{ y: 0, opacity: 1 }}
+                   transition={{ duration: 0.7, bounce: 0.5, type: "spring" }}
                   whileHover={{ scale: 1.04 }}
                   className="card  m-3  border-none pointer shadow-out"
                 >
