@@ -163,7 +163,7 @@ const Products = () => {
       temp: "Max Temperature : 1500-2000 degree Celsius",
       rated: "Rated Power (KW) : 15 kW",
       input: "Input Voltage (V) : 415 V",
-      Comsumpstion: "Power Comsumpstion (KW) : 50 KW",
+      Consumption: "Power Comsumpstion (KW) : 50 KW",
       automation: "Automation Grade : Automatic",
     },
     {
@@ -172,13 +172,12 @@ const Products = () => {
       title: "Electric Roller Hearth Furnace",
       price: "Rs 2.5 Lakhs / Unit",
       material: "Melting Material : Copper",
-      Meterial: "Material Loading Capacity (T): 100Kg",
+      Loading: "Material Loading Capacity (T): 100Kg",
       power: "Power Source : Electric",
       type: "Type Of Furnace : Tilt",
       temp: "Max Temperature : 500-1000 degree Celsius",
       rated: "Rated Power (KW) : 15 kW",
       input: "Input Voltage (V) : 415 V",
-
       automation: "Automation Grade : Automatic",
     },
     {
@@ -188,7 +187,7 @@ const Products = () => {
       price: "Rs 80,000 / Unit",
       material: "Melting Material : Copper",
       power: "Power Source : Electric",
-      Meterial: "Material Loading Capacity (T): 100Kg",
+      Loading: "Material Loading Capacity (T): 100Kg",
       type: "Type Of Furnace : Tilt",
       temp: "Max Temperature : 500-1000 degree Celsius",
       rated: "Rated Power (KW) : 5 kW",
@@ -229,10 +228,12 @@ const Products = () => {
                     <p className="card-text mx-3">{item.price}</p>
                     <p className="card-text mx-3">{item.material}</p>
                     <p className="card-text mx-3">{item.power}</p>
+                    <p className="card-text mx-3">{item.Loading}</p>
                     <p className="card-text mx-3">{item.type}</p>
                     <p className="card-text mx-3">{item.temp}</p>
                     <p className="card-text mx-3">{item.rated}</p>
                     <p className="card-text mx-3">{item.input}</p>
+                    <p className="card-text mx-3">{item.Consumption}</p>
                     <p className="card-text mx-3">{item.automation}</p>
                   </div>
                 </motion.div>
