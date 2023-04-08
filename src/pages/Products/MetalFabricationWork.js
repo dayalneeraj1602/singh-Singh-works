@@ -3,59 +3,38 @@ import { Link } from "react-router-dom";
 import "../../styles/Services.css";
 import { motion } from "framer-motion";
 
-const DcMotor = () => {
+const MetalFabricationWork = () => {
   const dataInfo = [
     {
       id: 1,
       imgUrl:
-        "https://5.imimg.com/data5/SELLER/Default/2022/5/DX/GA/UY/3043207/abb-three-phase-induction-motor-500x500.PNG",
-      productTitle: "DC MOTOR",
-      ProductDescription: "7.5 HP DC MOTOR",
+        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
+      productTitle: "Hello",
+      ProductDescription:
+        "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 2,
       imgUrl:
-        "https://cpimg.tistatic.com/02710406/b/4/Furnace-Control-Panel.jpg",
-      productTitle: "PANNEL",
+        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
+      productTitle: "Fabrication Work",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 3,
       imgUrl:
-        "https://5.imimg.com/data5/SELLER/Default/2020/11/PW/TU/KH/100222224/electric-motors-500x500.jpg",
-      productTitle: "DC MOTOR",
-      ProductDescription: "2.2 HP DC MOTOR",
-    },
-    {
-      id: 4,
-      imgUrl:
-        "https://www.elecon.com/views/templates/products/68380Worm_Gear_Small.png",
-      productTitle: "GEAR BOX",
-      ProductDescription: "Gear Box for DC MOtor",
-    },
-    {
-      id: 5,
-      imgUrl:
         "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
       productTitle: "Fabrication Work",
       ProductDescription:
-        "High-temperature  processes for material processing.",
-    },
-    {
-      id: 6,
-      imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Fabrication Work",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for ",
+        "High-temperature heating device used in industrial processes for material processing.",
     },
   ];
   return (
     <div className="row my-5 pop container center cardsServices">
       <div className="col-12 center">
         <span className="center fs-2  stroke p-1 ls-2">
-          Dc Motor and Panels
+          Metal Fabrication Work
         </span>
         <div className="row">
           {dataInfo.map((item) => {
@@ -64,15 +43,16 @@ const DcMotor = () => {
                 <Link to={item.link} className="bg-grey ">
                   <motion.div
                     initial={{
-                      y: item.id % 2 === 0 ? "-100vw" : "100vw",
+                      x: item.id % 2 === 0 ? "-100vw" : "100vw",
                       opacity: 0,
                     }}
-                    animate={{ y: 0, opacity: 1 }}
+                    animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.7, bounce: 0.5, type: "spring" }}
+                    // style={{ height: "10rem" }}
                     whileHover={{ scale: 1.04 }}
-                    className="card  m-3  border-none pointer shadow-out"
+                    className="card  m-3 b-20   border-none pointer shadow-out"
                   >
-                    <div className="card-body bg-grey border-none py-4">
+                    <div className="card-body  b-20 bg-grey border-none py-4">
                       <div className="center p-2 m-2 serviceCardImg shadow-in my-3">
                         <img
                           className="img-fluid p-2 "
@@ -99,4 +79,4 @@ const DcMotor = () => {
   );
 };
 
-export default DcMotor;
+export default MetalFabricationWork;

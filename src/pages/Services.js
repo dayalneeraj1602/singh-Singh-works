@@ -27,37 +27,28 @@ const Services = () => {
       id: 3,
       imgUrl:
         "https://haryanarubberudyog.com/wp-content/uploads/2020/02/cnc-turning.jpg",
-      productTitle: "Leath",
+      productTitle: "Manufacturing",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/leath",
+      link: "/services/Manufacturing",
     },
     {
       id: 4,
       imgUrl:
-        "https://5.imimg.com/data5/SELLER/Default/2022/5/DX/GA/UY/3043207/abb-three-phase-induction-motor-500x500.PNG",
-      productTitle: "Dc Motor & Panel",
+        "	https://th.bing.com/th/id/OIP.ljhNrcmXku7hYzPplCFexQHaE7?pid=ImgDet&rs=1",
+      productTitle: "Metal Tool Room",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/dcmotor&panel",
+      link: "/services/MetalToolRoom",
     },
     {
       id: 5,
       imgUrl:
-        "	https://cdn.pixabay.com/photo/2016/01/13/14/16/factory-1137993__480.jpg",
-      productTitle: "Conveyor Belt",
+        "		https://technocratoman.com/en/wp-content/uploads/2020/02/Metal-Fabrication-1.jpg",
+      productTitle: "Metal Fabrication Work",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/conveyorBelt",
-    },
-    {
-      id: 7,
-      imgUrl:
-        "https://cpimg.tistatic.com/05398323/b/5/High-Temperature-Alumina-Ceramic-Roller-For-Roller-Kiln.jpg",
-      productTitle: "Ceramic Roller",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/ceramic_roller",
+      link: "/services/MetalFabricationWork",
     },
   ];
   return (
@@ -67,19 +58,16 @@ const Services = () => {
         <div className="row">
           {dataInfo.map((item) => (
             // __________items_Card____________
-            <div
-              className="col-lg-4 my-1 col-md-6 col-sm-12"
-              key={item.id}
-            >
+            <div className="col-lg-4 my-1 col-md-6 col-sm-12" key={item.id}>
               <Link to={item.link} className="b-20 bg-grey ">
                 <motion.div
-                   initial={{
+                  initial={{
                     x: item.id % 2 === 0 ? 0 : "100vw",
                     y: item.id % 2 === 0 ? "-100vh" : 0,
                     opacity: 0,
                   }}
                   animate={{ x: 0, y: 0, opacity: 1 }}
-                  transition={{ duration: 0.5, bounce: .57, type: "spring" }}
+                  transition={{ duration: 0.5, bounce: 0.57, type: "spring" }}
                   // style={{ height: "10rem" }}
                   whileHover={{ scale: 1.04 }}
                   className="card  m-3 b-20 border-none pointer shadow-out"

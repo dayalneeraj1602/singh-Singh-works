@@ -3,29 +3,45 @@ import { Link } from "react-router-dom";
 import "../../styles/Services.css";
 import { motion } from "framer-motion";
 
-const Fabrication = () => {
+const MetalToolRoom = () => {
   const dataInfo = [
     {
       id: 1,
       imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Hello",
+        "https://img.freepik.com/free-photo/industry-lathe-machine-work_44762-848.jpg?size=626&ext=jpg",
+      productTitle: "Leath Work",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 2,
       imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Fabrication Work",
+        "	https://ak5.picdn.net/shutterstock/videos/1023514465/thumb/1.jpg",
+      productTitle: "Milling Work",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 3,
       imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Fabrication Work",
+        "	https://lirp.cdn-website.com/1a47db05/dms3rep/multi/opt/home-c2-213x213-426w.jpg",
+      productTitle: "Drilling Work",
+      ProductDescription:
+        "High-temperature heating device used in industrial processes for material processing.",
+    },
+    {
+      id: 4,
+      imgUrl:
+        "	https://www.waldrichsiegen.com/fileadmin/ws/img/products/roll-grinder-profigrind-800k.jpg",
+      productTitle: "Granding Work",
+      ProductDescription:
+        "High-temperature heating device used in industrial processes for material processing.",
+    },
+    {
+      id: 5,
+      imgUrl:
+        "https://5.imimg.com/data5/KH/NF/SP/SELLER-876530/industrial-hard-chrome-plated-roller-500x500.JPG",
+      productTitle: "Hard Crome",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
     },
@@ -33,7 +49,7 @@ const Fabrication = () => {
   return (
     <div className="row my-5 pop container center cardsServices">
       <div className="col-12 center">
-        <span className="center fs-2  stroke p-1 ls-2">Fabrication Works</span>
+        <span className="center fs-2  stroke p-1 ls-2">Metal Tool Room</span>
         <div className="row">
           {dataInfo.map((item) => {
             return (
@@ -41,14 +57,13 @@ const Fabrication = () => {
                 <Link to={item.link} className="bg-grey ">
                   <motion.div
                     initial={{
-                      x: item.id % 2 === 0 ? "-100vw" : "100vw",
+                      y: item.id % 2 === 0 ? "-100vw" : "100vw",
                       opacity: 0,
                     }}
-                    animate={{ x: 0, opacity: 1 }}
+                    animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.7, bounce: 0.5, type: "spring" }}
-                    // style={{ height: "10rem" }}
                     whileHover={{ scale: 1.04 }}
-                    className="card  m-3 b-20   border-none pointer shadow-out"
+                    className="card  m-3 b-20  border-none pointer shadow-out"
                   >
                     <div className="card-body  b-20 bg-grey border-none py-4">
                       <div className="center p-2 m-2 serviceCardImg shadow-in my-3">
@@ -77,4 +92,4 @@ const Fabrication = () => {
   );
 };
 
-export default Fabrication;
+export default MetalToolRoom;

@@ -3,37 +3,124 @@ import { Link } from "react-router-dom";
 import "../../styles/Services.css";
 import { motion } from "framer-motion";
 
-const Fabrication = () => {
+const FurnaceParts = () => {
   const dataInfo = [
     {
       id: 1,
       imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Hello",
+        "https://image.made-in-china.com/2f0j00cCjQkJBPQMoy/Three-Phase-Induction-Motor-Y3-.jpg",
+      productTitle: "Dc Motor",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 2,
       imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Fabrication Work",
+        "https://5.imimg.com/data5/TP/QT/MY-125053/single-phase-ac-motors-500x500.jpg",
+      productTitle: "AC Motor",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 3,
       imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Fabrication Work",
+        "https://samdex.eu/wp-content/uploads/2019/11/C.2.5Helical-worm-geared-motors015.jpg",
+      productTitle: "Gear Box with Motor",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
+    },
+    {
+      id: 4,
+      imgUrl:
+        "https://img2.exportersindia.com/product_images/bc-full/dir_112/3351704/vtdrive-high-performance-ac-drives-380v-3-phase-1527516.jpg",
+      productTitle: "AC Drive ",
+      ProductDescription:
+        "High-temperature heating device used in industrial processes for material processing.",
+    },
+    {
+      id: 5,
+      imgUrl:
+        "https://5.imimg.com/data5/PA/SP/NK/SELLER-5944088/parker-598g-dc-drive.jpg",
+      productTitle: "DC Drive",
+      ProductDescription:
+        "High-temperature heating device used in industrial processes for material processing.",
+    },
+    {
+      id: 6,
+      imgUrl:
+        "https://5.imimg.com/data5/CW/BO/CW/SELLER-85655579/furnace-control-panel-500x500.jpg",
+      productTitle: "Control Panel",
+      ProductDescription:
+        "High-temperature heating device used in industrial processes for material processing.",
+    },
+    {
+      id: 7,
+      imgUrl:
+        "https://4.imimg.com/data4/XV/YM/MY-2046773/furnace-temperature-indicator-250x250.png",
+      productTitle: "Teamperature Indicator",
+      ProductDescription:
+        "High-temperature heating device used in industrial processes for material processing.",
+    },
+    {
+      id: 8,
+      imgUrl:
+        "https://5.imimg.com/data5/SELLER/Default/2022/2/XJ…202-humidity-temperature-controller-1000x1000.png",
+      productTitle: "Teamperature Controller",
+      ProductDescription:
+        "High-temperature heating device used in industrial processes for material processing.",
+    },
+    {
+      id: 9,
+      imgUrl:
+        "https://3.imimg.com/data3/DK/QD/MY-7176933/hot-face-insulation-bricks-500x500.jpg",
+      productTitle: "Insulation Brick(Hot FAce)",
+      ProductDescription:
+        "High-temperature heating device used in industrial processes for material processing.",
+    },
+    {
+      id: 10,
+      imgUrl:
+        "https://th.bing.com/th/id/OIP.HFTuTSnnR-17oSa4-egl0wHaHa?w=174&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+      productTitle: "Insulation Brick(Cold Face)",
+      ProductDescription:
+        "High-temperature heating device used in industrial processes for material processing.",
+    },
+    {
+      id: 11,
+      imgUrl:
+        "		https://3.imimg.com/data3/WF/YQ/MY-2185590/insulation-bricks-500x500.jpg",
+      productTitle: "HFK Bricks",
+      ProductDescription:
+        "High-temperature heating device used in industrial processes for material processing.",
+    },
+    {
+      id: 12,
+      imgUrl:
+        "https://images.homedepot-static.com/productImages/…4/svn/unitherm-insulation-cf6-1-24x25-64_1000.jpg",
+      productTitle: "Blanket",
+      ProductDescription:
+        "High-temperature heating device used in industrial processes for material processing.",
+    },
+    {
+      id: 13,
+      imgUrl:
+        "https://th.bing.com/th/id/OIP.jCGG0QTKpOeVM8bzWkMLGAAAAA?pid=ImgDet&rs=1",
+      productTitle: "Fiber Blanket",
+      ProductDescription:
+        "High-temperature heating device used in industrial processes for material processing.",
+    },
+    {
+      id: 14,
+      imgUrl:
+        "	https://5.imimg.com/data5/PL/SF/MY-2506826/supercera-ceramic-fiber-500x500.jpg",
+      productTitle: "Fiber Wool",
+      Brand: "Morgapa,Supercera,Spain",
     },
   ];
   return (
     <div className="row my-5 pop container center cardsServices">
       <div className="col-12 center">
-        <span className="center fs-2  stroke p-1 ls-2">Fabrication Works</span>
+        <span className="center fs-2  stroke p-1 ls-2">Furnace Parts</span>
         <div className="row">
           {dataInfo.map((item) => {
             return (
@@ -77,4 +164,4 @@ const Fabrication = () => {
   );
 };
 
-export default Fabrication;
+export default FurnaceParts;

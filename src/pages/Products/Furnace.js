@@ -225,6 +225,51 @@ const Products = () => {
 
       automation: "Automation Grade : Automatic",
     },
+    {
+      id: 17,
+      img: "https://img.directindustry.com/images_di/photo-g/21762-14916681.jpg",
+      title: "Dryer",
+      price: "Rs 80,000 / Unit",
+      material: "Melting Material : Copper",
+      power: "Power Source : Electric",
+      Loading: "Material Loading Capacity (T): 100Kg",
+      type: "Type Of Furnace : Tilt",
+      temp: "Max Temperature : 500-1000 degree Celsius",
+      rated: "Rated Power (KW) : 5 kW",
+      input: "Input Voltage (V) : 415 V",
+
+      automation: "Automation Grade : Automatic",
+    },
+    {
+      id: 18,
+      img: "https://img.directindustry.com/images_di/photo-g/21762-14916681.jpg",
+      title: "Conveyor",
+      price: "Rs 80,000 / Unit",
+      material: "Melting Material : Copper",
+      power: "Power Source : Electric",
+      Loading: "Material Loading Capacity (T): 100Kg",
+      type: "Type Of Furnace : Tilt",
+      temp: "Max Temperature : 500-1000 degree Celsius",
+      rated: "Rated Power (KW) : 5 kW",
+      input: "Input Voltage (V) : 415 V",
+
+      automation: "Automation Grade : Automatic",
+    },
+    {
+      id: 19,
+      img: "https://img.directindustry.com/images_di/photo-g/21762-14916681.jpg",
+      title: "Trolley",
+      price: "Rs 80,000 / Unit",
+      material: "Melting Material : Copper",
+      power: "Power Source : Electric",
+      Loading: "Material Loading Capacity (T): 100Kg",
+      type: "Type Of Furnace : Tilt",
+      temp: "Max Temperature : 500-1000 degree Celsius",
+      rated: "Rated Power (KW) : 5 kW",
+      input: "Input Voltage (V) : 415 V",
+
+      automation: "Automation Grade : Automatic",
+    },
   ];
   return (
     <>

@@ -9,13 +9,10 @@ import Projects from "./pages/Projects";
 import Products from "./pages/Products/Furnace";
 import AllProducts from "./components/AllProducts";
 import Furnace from "./pages/Products/Furnace";
-import Ceramic from "./pages/Products/Ceramic";
-import Conveyor from "./pages/Products/Conveyor";
-import DcMotor from "./pages/Products/DcMotor";
-import Fabrication from "./pages/Products/Fabrication";
-import Leath from "./pages/Products/Leath";
 import FurnaceParts from "./pages/Products/FurnaceParts";
-
+import Manufacturing from "./pages/Products/Manufacturing";
+import MetalToolRoom from "./pages/Products/MetalToolRoom";
+import MetalFabricationWork from "./pages/Products/MetalFabricationWork";
 function App() {
   return (
     <>
@@ -30,12 +27,14 @@ function App() {
           <Route path="/allproducts" element={<AllProducts />} />
           <Route path="/products" element={<Products />} />
           <Route path="/services/furnace" element={<Furnace />} />
-          <Route path="/services/ceramic_roller" element={<Ceramic />} />
-          <Route path="/services/conveyorBelt" element={<Conveyor />} />
-          <Route path="/services/fabricationWork" element={<Fabrication />} />
-          <Route path="/services/dcmotor&panel" element={<DcMotor />} />
-          <Route path="/services/leath" element={<Leath />} />
-          <Route path="/services/furnace_parts" element={<FurnaceParts />} />
+          <Route path="/services/FurnaceParts" element={<FurnaceParts />} />
+          <Route path="/services/Manufacturing" element={<Manufacturing />} />
+          <Route path="/services/MetalToolRoom" element={<MetalToolRoom />} />
+          <Route
+            path="/services/MetalFabricationWork"
+            element={<MetalFabricationWork />}
+          />
+
           {/* <Route path='*' element={<errorPage/> } /> */}
         </Routes>
       </Router>
