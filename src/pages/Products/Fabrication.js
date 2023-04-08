@@ -27,6 +27,13 @@ const Fabrication = () => {
         "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
       productTitle: "Fabrication Work",
       ProductDescription:
+        "High-temperature heating device used in industria{l processes for material processing.",
+    },
+    {
+      id: 4,
+      imgUrl: "",
+      productTitle: "Fabrication Work",
+      ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
     },
   ];

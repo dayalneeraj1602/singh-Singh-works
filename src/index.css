@@ -71,7 +71,7 @@
   letter-spacing: 2px;
 }
 .bg-grey{
-  background: var(--greyLight-1);
+  /* background: var(--greyLight-1); */
 }
 .dim {
   color: var(--primary-dark);
@@ -108,7 +108,7 @@
   background: var(--primary);
 }
 body {
-  background: var(--greyLight-1);
+  /* background: var(--greyLight-1); */
 }
 
 .pop {
