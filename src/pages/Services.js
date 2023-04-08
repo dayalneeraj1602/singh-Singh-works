@@ -18,10 +18,10 @@ const Services = () => {
       id: 2,
       imgUrl:
         "https://cdn.thefabricator.com/a/what-is-metal-fabrication-and-where-is-the-industry-headed--0.jpg",
-      productTitle: "Fabrication Work",
+      productTitle: "Furnace Parts",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/fabricationWork",
+      link: "/services/FurnaceParts",
     },
     {
       id: 3,
@@ -43,15 +43,6 @@ const Services = () => {
     },
     {
       id: 5,
-      imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Furnace Parts",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/furnace_parts",
-    },
-    {
-      id: 6,
       imgUrl:
         "	https://cdn.pixabay.com/photo/2016/01/13/14/16/factory-1137993__480.jpg",
       productTitle: "Conveyor Belt",

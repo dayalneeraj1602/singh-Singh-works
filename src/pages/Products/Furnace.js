@@ -195,6 +195,36 @@ const Products = () => {
 
       automation: "Automation Grade : Automatic",
     },
+    {
+      id: 15,
+      img: "https://5.imimg.com/data5/KW/XN/KK/SELLER-36709685/electric-aluminum-heat-treatment-furnace-500x500.jpg",
+      title: "Thermal Sytech Furnaces",
+      price: "Rs 7 Lakhs / Unit",
+      material: "Melting Material : Copper",
+      power: "Power Source : Electric",
+      Loading: "Material Loading Capacity (T): 100Kg",
+      type: "Type Of Furnace : Fix",
+      Loading: "Material Loading Capacity(T) : 2-4 Ton",
+      rated: "Rated Power (KW) :80 kW",
+      input: "Input Voltage (V) : 440 V",
+
+      automation: "Automation Grade : Automatic",
+    },
+    {
+      id: 16,
+      img: "https://img.directindustry.com/images_di/photo-g/21762-14916681.jpg",
+      title: "Pre Heating Furnaces",
+      price: "Rs 80,000 / Unit",
+      material: "Melting Material : Copper",
+      power: "Power Source : Electric",
+      Loading: "Material Loading Capacity (T): 100Kg",
+      type: "Type Of Furnace : Tilt",
+      temp: "Max Temperature : 500-1000 degree Celsius",
+      rated: "Rated Power (KW) : 5 kW",
+      input: "Input Voltage (V) : 415 V",
+
+      automation: "Automation Grade : Automatic",
+    },
   ];
   return (
     <>
@@ -205,7 +235,7 @@ const Products = () => {
             {data.map((item) => (
               <div className="col-12 col-md-6 col-lg-4 my-3">
                 <motion.div
-                   initial={{
+                  initial={{
                     y: item.id % 2 === 0 ? "-100vh" : "100vh",
                     opacity: 0,
                   }}
