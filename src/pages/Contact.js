@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Contact.css";
 import { motion } from "framer-motion";
 import { useForm } from "@formspree/react";
@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css";
 const Contact = () => {
   const mailkey = process.env.REACT_APP_FORMSPREE_ID;
   const [state, handleSubmit] = useForm(mailkey);
-  const [sent, setsent] = useState("");
 
   if (state.succeeded) {
     toast.success("Message Sent Successfully");
@@ -110,7 +109,6 @@ const Contact = () => {
                 >
                   {state.submitting ? "Sending..." : "Send"}
                 </button>
-                {sent && <p className="text-success fs-4">{sent}</p>}
               </div>
             </motion.form>
           </div>

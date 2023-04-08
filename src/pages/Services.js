@@ -17,16 +17,16 @@ const Services = () => {
     {
       id: 2,
       imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Fabrication Work",
+        "https://cdn.thefabricator.com/a/what-is-metal-fabrication-and-where-is-the-industry-headed--0.jpg",
+      productTitle: "Furnace Parts",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/fabricationWork",
+      link: "/services/FurnaceParts",
     },
     {
       id: 3,
       imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
+        "https://haryanarubberudyog.com/wp-content/uploads/2020/02/cnc-turning.jpg",
       productTitle: "Leath",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
@@ -35,7 +35,7 @@ const Services = () => {
     {
       id: 4,
       imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
+        "https://5.imimg.com/data5/SELLER/Default/2022/5/DX/GA/UY/3043207/abb-three-phase-induction-motor-500x500.PNG",
       productTitle: "Dc Motor & Panel",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
@@ -44,16 +44,7 @@ const Services = () => {
     {
       id: 5,
       imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Furnace Parts",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/furnace_parts",
-    },
-    {
-      id: 6,
-      imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
+        "	https://cdn.pixabay.com/photo/2016/01/13/14/16/factory-1137993__480.jpg",
       productTitle: "Conveyor Belt",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
@@ -62,7 +53,7 @@ const Services = () => {
     {
       id: 7,
       imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
+        "https://cpimg.tistatic.com/05398323/b/5/High-Temperature-Alumina-Ceramic-Roller-For-Roller-Kiln.jpg",
       productTitle: "Ceramic Roller",
       ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
