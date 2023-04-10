@@ -41,15 +41,15 @@ const Services = () => {
         "High-temperature heating device used in industrial processes for material processing.",
       link: "/services/MetalToolRoom",
     },
-    {
-      id: 5,
-      imgUrl:
-        "		https://technocratoman.com/en/wp-content/uploads/2020/02/Metal-Fabrication-1.jpg",
-      productTitle: "Metal Fabrication Work",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/MetalFabricationWork",
-    },
+    // {
+    //   id: 5,
+    //   imgUrl:
+    //     "		https://technocratoman.com/en/wp-content/uploads/2020/02/Metal-Fabrication-1.jpg",
+    //   productTitle: "Metal Fabrication Work",
+    //   ProductDescription:
+    //     "High-temperature heating device used in industrial processes for material processing.",
+    //   link: "/services/MetalFabricationWork",
+    // },
   ];
   return (
     <div className="row my-5 pop container center cardsServices">

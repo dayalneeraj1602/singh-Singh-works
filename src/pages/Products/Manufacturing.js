@@ -48,7 +48,7 @@ const Manufacturing = () => {
     {
       id: 6,
       imgUrl:
-        "https://2.imimg.com/data2/JK/KJ/MY-/anchors-for-ceramic-fibre-l-1000x1000.jpg",
+      "https://file2.okorder.com/prodalbum/2014/12/16/e9eec9f3c22d628862540d9bf62f76bd.jpg",
       productTitle: "Module Anckor",
       ProductDescription: "S.S 304 & S.S. 310",
     },
