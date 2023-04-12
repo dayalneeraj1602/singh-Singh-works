@@ -202,7 +202,6 @@ const Products = () => {
       price: "Rs 7 Lakhs / Unit",
       material: "Melting Material : Copper",
       power: "Power Source : Electric",
-      Loading: "Material Loading Capacity (T): 100Kg",
       type: "Type Of Furnace : Fix",
       Loading: "Material Loading Capacity(T) : 2-4 Ton",
       rated: "Rated Power (KW) :80 kW",
