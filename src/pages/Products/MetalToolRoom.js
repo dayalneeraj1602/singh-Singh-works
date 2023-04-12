@@ -10,40 +10,40 @@ const MetalToolRoom = () => {
       imgUrl:
         "https://img.freepik.com/free-photo/industry-lathe-machine-work_44762-848.jpg?size=626&ext=jpg",
       productTitle: "Leath Work",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
+      // ProductDescription:
+      //   "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 2,
       imgUrl:
         "	https://ak5.picdn.net/shutterstock/videos/1023514465/thumb/1.jpg",
       productTitle: "Milling Work",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
+      // ProductDescription:
+      //   "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 3,
       imgUrl:
         "	https://lirp.cdn-website.com/1a47db05/dms3rep/multi/opt/home-c2-213x213-426w.jpg",
       productTitle: "Drilling Work",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
+      // ProductDescription:
+      //   "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 4,
       imgUrl:
         "	https://www.waldrichsiegen.com/fileadmin/ws/img/products/roll-grinder-profigrind-800k.jpg",
       productTitle: "Granding Work",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
+      // ProductDescription:
+      //   "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 5,
       imgUrl:
         "https://5.imimg.com/data5/KH/NF/SP/SELLER-876530/industrial-hard-chrome-plated-roller-500x500.JPG",
       productTitle: "Hard Crome",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
+      // ProductDescription:
+      //   "High-temperature heating device used in industrial processes for material processing.",
     },
   ];
   return (

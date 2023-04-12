@@ -10,40 +10,40 @@ const Manufacturing = () => {
       imgUrl:
         "	https://www.betterceramic.com/wp-content/uploads/2020/05/Alumina-ceramic-tube-and-rod-5.jpg",
       productTitle: "Ceramic Tube",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
+      // ProductDescription:
+      //   "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 2,
       imgUrl:
         "	https://th.bing.com/th/id/OIP.eThAzxdBhIBstb4PooSKWgHaHa?pid=ImgDet&w=205&h=205&c=7&dpr=1.3",
       productTitle: "Thermocopal",
-      ProductDescription:
-        "Temperature Sensor",
+      // ProductDescription:
+      //   "Temperature Sensor",
     },
     {
       id: 3,
       imgUrl:
         "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
       productTitle: "Coupler Set",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
+      // ProductDescription:
+      //   "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 4,
       imgUrl:
         "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
       productTitle: "Bearing Bolt",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
+      // ProductDescription:
+      //   "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 5,
       imgUrl:
         "https://2.imimg.com/data2/JK/KJ/MY-/anchors-for-ceramic-fibre-l-1000x1000.jpg",
       productTitle: "Fiber Stud Washer ",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
+      // ProductDescription:
+      //   "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 6,
