@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const Products = () => {
   const data = [
@@ -278,7 +278,7 @@ const Products = () => {
           <div className="row">
             {data.map((item) => (
               <div className="col-12 col-md-6 col-lg-4 my-3">
-                <motion.div
+                <div
                   initial={{
                     y: item.id % 2 === 0 ? "-100vh" : "100vh",
                     opacity: 0,
@@ -310,7 +310,7 @@ const Products = () => {
                     <p className="card-text mx-3">{item.Consumption}</p>
                     <p className="card-text mx-3">{item.automation}</p>
                   </div>
-                </motion.div>
+                </div>
               </div>
             ))}
           </div>

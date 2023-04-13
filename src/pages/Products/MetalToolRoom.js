@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Services.css";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const MetalToolRoom = () => {
   const dataInfo = [
@@ -55,7 +55,7 @@ const MetalToolRoom = () => {
             return (
               <div className="col-lg-4 my-1 col-md-6 col-sm-12" key={item.id}>
                 <Link to={item.link} className="bg-grey ">
-                  <motion.div
+                  <div
                     initial={{
                       y: item.id % 2 === 0 ? "-100vw" : "100vw",
                       opacity: 0,
@@ -81,7 +81,7 @@ const MetalToolRoom = () => {
                         {item.ProductDescription}
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
                 </Link>
               </div>
             );

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Services.css";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const Services = () => {
   const dataInfo = [
@@ -60,7 +60,7 @@ const Services = () => {
             // __________items_Card____________
             <div className="col-lg-4 my-1 col-md-6 col-sm-12" key={item.id}>
               <Link to={item.link} className="b-20 bg-grey ">
-                <motion.div
+                <div
                   initial={{
                     x: item.id % 2 === 0 ? 0 : "100vw",
                     y: item.id % 2 === 0 ? "-100vh" : 0,
@@ -88,7 +88,7 @@ const Services = () => {
                       {item.ProductDescription}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               </Link>
             </div>
           ))}
