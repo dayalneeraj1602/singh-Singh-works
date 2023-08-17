@@ -7,9 +7,10 @@ const Navbar = () => {
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
+
   };
 
-  return (
+  return (         
     <div className="navbar d-flex shadow-out pop">
       <div className="navbar-brand  d-inline-block fs-1 ls-2">
         <Link
@@ -34,8 +35,7 @@ const Navbar = () => {
           title="Home"
           onClick={() => handleLinkClick("home")}
         >
-          <i class="fa-solid fa-house-chimney"></i>
-        </Link>
+HOme         </Link>
         <Link
           to="/services"
           className={`links ${
@@ -50,16 +50,11 @@ const Navbar = () => {
         </Link>
         <Link
           to="/contact"
-          className={`links ${
-            activeLink === "phone"
-              ? "stroke shadow-in p-2 roundedBorder"
-              : "stroke-grey"
-          }`}
+          className="links"
           title="Contact Us"
           onClick={() => handleLinkClick("phone")}
         >
-          <i className="fa-solid  p-2 fa-phone-volume"></i>
-        </Link>
+Contact Us        </Link>
       </div>
     </div>
   );
