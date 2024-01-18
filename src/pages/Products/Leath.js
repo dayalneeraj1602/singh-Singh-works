@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../styles/Services.css";
-import {motion} from 'framer-motion'
-import "../../styles/Services.css";
+
+
 
 const Leath = () => {
   const dataInfo = [
@@ -38,37 +37,37 @@ const Leath = () => {
         <div className="row">
           {dataInfo.map((item) => {
             return (
-              <div
-              className="col-lg-4 my-1 col-md-6 col-sm-12"
-              key={item.id}
-            >
-              <Link to={item.link} className="bg-grey ">
-                <motion.div
-                   initial={{  y: item.id % 2 === 0 ? "-100vw" : "100vw", opacity: 0 }}
-                   animate={{ y: 0, opacity: 1 }}
-                   transition={{ duration: 0.7, bounce: 0.5, type: "spring" }}
-                  whileHover={{ scale: 1.04 }}
-                  className="card  m-3  border-none pointer shadow-out"
-                >
-                  <div className="card-body bg-grey border-none py-4">
-                    <div className="center p-2 m-2 serviceCardImg shadow-in my-3">
-                      <img
-                        className="img-fluid p-2 "
-                        src={item.imgUrl}
-                        alt="productImg"
-                      />
-                    </div>
+              <div className="col-lg-4 my-1 col-md-6 col-sm-12" key={item.id}>
+                <Link to={item.link} className="bg-grey ">
+                  <div
+                    initial={{
+                      y: item.id % 2 === 0 ? "-100vw" : "100vw",
+                      opacity: 0,
+                    }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.7, bounce: 0.5, type: "spring" }}
+                    whileHover={{ scale: 1.04 }}
+                    className="card  m-3  border-none pointer shadow-out"
+                  >
+                    <div className="card-body bg-grey border-none py-4">
+                      <div className="center p-2 m-2 serviceCardImg shadow-in my-3">
+                        <img
+                          className="img-fluid p-2 "
+                          src={item.imgUrl}
+                          alt="productImg"
+                        />
+                      </div>
 
-                    <div className="card-title center fs-5 dim">
-                      {item.productTitle}
+                      <div className="card-title center fs-5 dim">
+                        {item.productTitle}
+                      </div>
+                      <p className="card-text px-3 text-secondary">
+                        {item.ProductDescription}
+                      </p>
                     </div>
-                    <p className="card-text px-3 text-secondary">
-                      {item.ProductDescription}
-                    </p>
                   </div>
-                </motion.div>
-              </Link>
-            </div>
+                </Link>
+              </div>
             );
           })}
         </div>

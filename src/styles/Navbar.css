@@ -1,68 +1,105 @@
-.navbar {
-  backdrop-filter: blur(3rem);
-  position: sticky;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 111;
+/* Add this CSS to your stylesheets */
+
+.sticky-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px; /* Adjust padding as needed */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  position: fixed;
+  background: transparent;
+  top: 0px;
+  z-index: 999;
+  width: 100%;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.2);
+  transition: 0.3s ease;
 }
-.logo {
-  width: 4rem;
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-weight: lighter;
+  text-decoration: none;
+  color: #000; /* Set the text color */
+}
+
+.navbar-brand img {
+  width: 55px; /* Set the width of your logo */
+  height: auto;
+  margin-right: 10px; /* Add margin to separate the logo from text */
+}
+/* .navbar-brand span {
+  color: inherit;
+} */
+
+.nav-items {
+  display: flex;
 }
 
 .nav-items a {
-  padding: 0.2rem;
-}
-.nav-items a:active {
-  box-shadow: var(--shadow-out);
-  padding: 0.4rem;
-  border-radius: 45%;
-}
-.nav-items a:hover {
-  color: var(--primary-light);
-}
-.navbar .nav-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 1rem 2rem;
-}
-.brand {
   text-decoration: none;
-  color: black;
-  transition: .3s ease;
-}
-.brand:focus,
-.brand:active {
-  outline: none;
-  border: none;
-}
-.brand:hover {
-  color: var(--primary-dark);
-}
-.links {
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin: 0rem 3rem;
-  text-decoration: none;
-  transition: 0.1s ease-out;
+  color: inherit;
+  margin-right: 30px; /* Add margin between each nav item */
+  font-weight: 500; /* Set the font weight */
+  font-size: 18px; /* Set the font size */
+  position: relative;
+  transition: color 0.2s ease;
 }
 
-.curve {
-  border-radius: 13px;
-}
-.product_images img {
-  width: 20rem;
-  border-radius: 10px;
-}
-.cards {
-  border-radius: 10px;
-}
-
-#navbarNavDropdown {
+/* .nav-items a::before, */
+.nav-items a::after {
+  content: "";
   position: absolute;
-  right: 7rem;
+  height: 2px; /* Set the initial height of the line */
+  width: 0;
+  filter: contrast(2.8);
+  background: linear-gradient(
+    135deg,
+    #e74848 80%,
+    #ffffff
+  ); /* Set the gradient color of the line */
+  transition: width 0.2s ease;
+}
+
+.nav-items a::before {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-items a::after {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-items a:hover {
+  opacity: 0.8;
+}
+
+.nav-items a:hover::after {
+  width: 100%; /* Set the width of the line on hover */
+}
+.scrolled {
+  backdrop-filter: blur(7px);
+  background: #fff;
+  color: #3b3b3b;
+  z-index: 999;
+  /* transition: 0.1s ease;  */
+}
+/* .scrolled .nav-items a {
+  color: #3b3b3b !important;
+}
+.scrolled .navbar-brand span {
+  color: #3b3b3b !important;
+} */
+
+.nav-items a.active {
+  /* Add your styles for the active link here */
+  color: #e74848; /* Change the text color for the active link */
+}
+
+.nav-items a.active::before,
+.nav-items a.active::after {
+  width: 100%; /* Set the width of the line for the active link */
 }

@@ -1,113 +1,75 @@
-import React from "react";
-import "../styles/Services.css";
+import React, { useContext } from "react";
+import {
+  LazyLoadComponent,
+  LazyLoadImage,
+} from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { DataContext } from "../Context/DataContext";
 
 const Services = () => {
-  const dataInfo = [
-    {
-      id: 1,
-      imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Furnace",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/furnace",
-    },
-    {
-      id: 2,
-      imgUrl:
-        "https://cdn.thefabricator.com/a/what-is-metal-fabrication-and-where-is-the-industry-headed--0.jpg",
-      productTitle: "Furnace Parts",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/FurnaceParts",
-    },
-    {
-      id: 3,
-      imgUrl:
-        "https://haryanarubberudyog.com/wp-content/uploads/2020/02/cnc-turning.jpg",
-      productTitle: "Leath",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/leath",
-    },
-    {
-      id: 4,
-      imgUrl:
-        "https://5.imimg.com/data5/SELLER/Default/2022/5/DX/GA/UY/3043207/abb-three-phase-induction-motor-500x500.PNG",
-      productTitle: "Dc Motor & Panel",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/dcmotor&panel",
-    },
-    {
-      id: 5,
-      imgUrl:
-        "	https://cdn.pixabay.com/photo/2016/01/13/14/16/factory-1137993__480.jpg",
-      productTitle: "Conveyor Belt",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/conveyorBelt",
-    },
-    {
-      id: 7,
-      imgUrl:
-        "https://cpimg.tistatic.com/05398323/b/5/High-Temperature-Alumina-Ceramic-Roller-For-Roller-Kiln.jpg",
-      productTitle: "Ceramic Roller",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/ceramic_roller",
-    },
-  ];
-  return (
-    <div className="row my-5 pop container center cardsServices">
-      <div className="col-12 center">
-        <span className="center fs-2  stroke p-1 ls-2">Our Services</span>
-        <div className="row">
-          {dataInfo.map((item) => (
-            // __________items_Card____________
-            <div
-              className="col-lg-4 my-1 col-md-6 col-sm-12"
-              key={item.id}
-            >
-              <Link to={item.link} className="b-20 bg-grey ">
-                <motion.div
-                   initial={{
-                    x: item.id % 2 === 0 ? 0 : "100vw",
-                    y: item.id % 2 === 0 ? "-100vh" : 0,
-                    opacity: 0,
-                  }}
-                  animate={{ x: 0, y: 0, opacity: 1 }}
-                  transition={{ duration: 0.5, bounce: .57, type: "spring" }}
-                  // style={{ height: "10rem" }}
-                  whileHover={{ scale: 1.04 }}
-                  className="card  m-3 b-20 border-none pointer shadow-out"
-                >
-                  <div className="card-body b-20 bg-grey border-none py-4">
-                    <div className="center p-2 m-2 serviceCardImg shadow-in my-3">
-                      <img
-                        className="img-fluid p-2 "
-                        src={item.imgUrl}
-                        alt="productImg"
-                      />
-                    </div>
+  const { dataServices: dataInfo } = useContext(DataContext);
 
-                    <div className="card-title center fs-5 dim">
-                      {item.productTitle}
-                    </div>
-                    <p className="card-text px-3 text-secondary">
-                      {item.ProductDescription}
-                    </p>
-                  </div>
-                </motion.div>
-              </Link>
-            </div>
-          ))}
-        </div>
+  return (
+    <div className="pt-5 mt-5 ">
+      <div className="text-center fw-bold fs-2 p-1">Our Services</div>
+
+      <div className="row px-5 m-0">
+        {dataInfo.map((item) => (
+          <ServiceCard key={item.id} data={item} />
+        ))}
       </div>
     </div>
   );
 };
 
-export default Services;
+const ServiceCard = ({ data }) => {
+  return (
+    <div className="col-12 col-md-6 col-lg-4 my-3">
+      <Link
+        to={data.link}
+        className="b-20 bg-grey "
+        style={{ color: "inherit", textDecoration: "none" }}
+      >
+        <div
+          className="card py-3 px-2"
+          style={{
+            borderRadius: "7px",
+            boxShadow: "0 0 15px rgba(0, 0, 0, 0.1)",
+          }}
+        >
+          <div className="card-body b-20 bg-grey border-none py-4">
+            <LazyLoadComponent>
+              <div className="center furnaceImg p-2 mb-3">
+                <LazyLoadImage
+                  src={data.imgUrl || "https://i.stack.imgur.com/y9DpT.jpg"}
+                  className="img-fluid p-2"
+                  alt={data.productTitle}
+                  effect="blur"
+                  threshold={100}
+                  style={{
+                    height: "300px",
+                    minHeight: "300px",
+                    borderRadius: "12px",
+                    width: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+            </LazyLoadComponent>
+
+            <div className="card-title center fs-5 dim">
+              {data.productTitle}
+            </div>
+            <p className="card-text text-secondary">
+              {data.ProductDescription}
+            </p>
+          </div>
+        </div>
+      </Link>
+    </div>
+  );
+};
+
+export default React.memo(Services);

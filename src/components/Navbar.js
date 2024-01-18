@@ -1,64 +1,107 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState("home");
+  const [isScrolled, setIsScrolled] = useState(null);
+  const location = useLocation();
 
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const isHome = location.pathname === "/";
+  const isProducts = location.pathname === "/products";
+  const isServices = location.pathname === "/services";
+  const isAbout = location.pathname === "/about";
+  const isContact = location.pathname === "/contact";
 
   return (
-    <div className="navbar d-flex shadow-out pop">
-      <div className="navbar-brand  d-inline-block fs-1 ls-2">
-        <Link
-          className="navbar-brand brand ms-5 fw-bold fs-4 d-flex "
-          to="/"
-          onClick={() => handleLinkClick("home")}
-        >
-          <div className="logo mx-2">
-            <img src="/logosew.png" alt="logo" className="logo " />
+    <div
+      className={`navbar d-flex shadow-out pop sticky-header ${
+        isScrolled < 50 && isHome
+          ? "text-light"
+          : isScrolled > 50
+          ? "scrolled "
+          : isScrolled >= 50 && isHome && "text-dark"
+      }`}
+    >
+      {/* ${isHome ? "home-page" : ""}` */}
+      <div className="navbar-brand d-inline-block fs-1 ls-2">
+        <Link className="navbar-brand brand ms-5 fw-bold fs-4 d-flex" to="/">
+          <div className="logo mx-2 d-flex">
+            <img src="/logosew.png" alt="logo" className="logo" />
+            <span
+              className={`
+            ${isScrolled < 50 && isHome ? "text-light" : "text-dark"}
+            `}
+            >
+              Singh Engineering Works
+            </span>
           </div>
-          <span className="p-1">Singh Engineering Works</span>
         </Link>
       </div>
       <div className="nav-items me-5">
         <Link
           to="/"
-          className={`links ${
-            activeLink === "home"
-              ? "stroke shadow-in px-3 py-2 roundedBorder"
-              : "stroke-grey"
-          }`}
           title="Home"
-          onClick={() => handleLinkClick("home")}
+          className={isHome ? "active" : ""}
+          onClick={() => {
+            setIsScrolled(null);
+            window.scrollTo(0, 0);
+          }}
         >
-          <i class="fa-solid fa-house-chimney"></i>
+          Home
+        </Link>
+        <Link
+          to="/products"
+          title="Products"
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+          className={isProducts ? "active" : ""}
+        >
+          Products
         </Link>
         <Link
           to="/services"
-          className={`links ${
-            activeLink === "truck"
-              ? "stroke shadow-in p-2 roundedBorder"
-              : "stroke-grey"
-          }`}
           title="Services"
-          onClick={() => handleLinkClick("truck")}
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+          className={isServices ? "active" : ""}
         >
-          <i className="fa-solid fa-truck p-2"></i>
+          Services
+        </Link>
+        <Link
+          to="/about"
+          title="About us"
+          className={isAbout ? "active" : ""}
+          onClick={() => {
+            setIsScrolled(true);
+            window.scrollTo(0, 0);
+          }}
+        >
+          About us
         </Link>
         <Link
           to="/contact"
-          className={`links ${
-            activeLink === "phone"
-              ? "stroke shadow-in p-2 roundedBorder"
-              : "stroke-grey"
-          }`}
           title="Contact Us"
-          onClick={() => handleLinkClick("phone")}
+          className={isContact ? "active" : ""}
+          onClick={() => {
+            setIsScrolled(true);
+            window.scrollTo(0, 0);
+          }}
         >
-          <i className="fa-solid  p-2 fa-phone-volume"></i>
+          Contact
         </Link>
       </div>
     </div>

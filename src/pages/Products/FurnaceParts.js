@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../styles/Services.css";
-import { motion } from "framer-motion";
+
+
 
 const Fabrication = () => {
   const dataInfo = [
@@ -33,13 +33,13 @@ const Fabrication = () => {
   return (
     <div className="row my-5 pop container center cardsServices">
       <div className="col-12 center">
-        <span className="center fs-2  stroke p-1 ls-2">Fabrication Works</span>
+        <span className="center fs-2  stroke p-1 ls-2">Furnace Parts</span>
         <div className="row">
           {dataInfo.map((item) => {
             return (
               <div className="col-lg-4 my-1 col-md-6 col-sm-12" key={item.id}>
                 <Link to={item.link} className="bg-grey ">
-                  <motion.div
+                  <div
                     initial={{
                       x: item.id % 2 === 0 ? "-100vw" : "100vw",
                       opacity: 0,
@@ -66,7 +66,7 @@ const Fabrication = () => {
                         {item.ProductDescription}
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
                 </Link>
               </div>
             );

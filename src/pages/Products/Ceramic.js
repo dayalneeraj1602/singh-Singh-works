@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../styles/Services.css";
-import {motion} from 'framer-motion'
+
+
 
 const Ceramic = () => {
   const dataInfo = [
@@ -42,11 +42,8 @@ const Ceramic = () => {
               key={item.id}
             >
               <Link to={item.link} className="bg-grey ">
-                <motion.div
-                   initial={{  y: item.id % 2 === 0 ? "-100vw" : "100vw", opacity: 0 }}
-                   animate={{ y: 0, opacity: 1 }}
-                   transition={{ duration: 0.7, bounce: 0.5, type: "spring" }}
-                  whileHover={{ scale: 1.04 }}
+                <div
+                   
                   className="card  m-3 b-20  border-none pointer shadow-out"
                 >
                   <div className="card-body  b-20 bg-grey border-none py-4">
@@ -65,7 +62,7 @@ const Ceramic = () => {
                       {item.ProductDescription}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               </Link>
             </div>
             );

@@ -1,0 +1,83 @@
+import React from "react";
+import "../styles/Footer.css";
+
+const Footer = () => {
+  const companyAddress =
+    "B-74, B Block, Sector 64, Noida Sector 64, Noida - 201301";
+  const googleMapsLink = `https://www.google.com/maps/dir//${encodeURIComponent(
+    companyAddress
+  )}/`;
+
+  return (
+    <footer className="footer py-5">
+      <div className="container">
+        <div className="row justify-content-between">
+          <div className="col-md-6 d-flex justify-content-around flex-column">
+            <div className="address">
+              <h4 className="">Address</h4>
+              <div className="s-border"></div>
+              <div className="m-border"></div>
+              <div className="ps-2">
+                <p>
+                  <i className="fa-solid fa-location-dot me-2"></i>
+                  {companyAddress}
+                </p>
+                <p>
+                  <i className="fa-solid fa-envelope me-2"></i>{" "}
+                  prabhudayal.001@gmail.com
+                </p>
+                <p>
+                  <i className="fa-solid fa-phone me-2"></i> +91 6280421789
+                </p>
+              </div>
+            </div>
+            <div className="timing">
+              <h4>Opening Hours</h4>
+              <div className="s-border"></div>
+              <div className="m-border"></div>
+              <div className="ps-2">
+                <p>
+                  {" "}
+                  <i className="me-2 fa-solid fa-clock"></i>Mon - Sat: 9:00 am -
+                  5:30 pm
+                </p>
+                <p>
+                  {" "}
+                  <i className="fa-solid fa-star me-2"></i>Sun: 9:00 am - 5:00
+                  pm
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-md-5 d-flex maps  flex-column">
+            {/* Google Maps Integration - Get Directions */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3502.539691244997!2d77.37200957564254!3d28.613582875675014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM2JzQ4LjkiTiA3N8KwMjInMjguNSJF!5e0!3m2!1sen!2sin!4v1705564294813!5m2!1sen!2sin"
+              width="100%"
+              height="300"
+              style={{ borderRadius: " 8px" }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+
+            <div className="mt-4 text-start">
+              <a
+                href={googleMapsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-start d-flex align-items-center text-decoration-none"
+              >
+                <i className="fa-solid fa-diamond-turn-right me-2"></i>Get
+                Directions
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
