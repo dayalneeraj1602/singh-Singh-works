@@ -5,6 +5,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400&display=swap");
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+::-webkit-scrollbar-thumb:active {
+  background: rgba(0, 0, 0, 0.9);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +51,11 @@
   border-radius: 50px;
   background: #c5c5c5;
 }
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #f35656;
 }

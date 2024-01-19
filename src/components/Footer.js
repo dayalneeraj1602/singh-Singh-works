@@ -9,7 +9,7 @@ const Footer = () => {
   )}/`;
 
   return (
-    <footer className="footer py-5">
+    <footer className="footer py-5 ">
       <div className="container">
         <div className="row justify-content-between">
           <div className="col-md-6 d-flex justify-content-around flex-column">

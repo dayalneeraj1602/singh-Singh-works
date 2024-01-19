@@ -3,7 +3,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
-// import errorPage from './pages/errorPage'
+import ErrorPage from "./pages/errorPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Projects from "./pages/Projects";
 import Products from "./pages/Products/Furnace";
@@ -38,7 +38,7 @@ function App() {
             <Route path="/services/dcmotor&panel" element={<DcMotor />} />
             <Route path="/services/leath" element={<Leath />} />
             <Route path="/services/FurnaceParts" element={<FurnaceParts />} />
-            {/* <Route path='*' element={<errorPage/> } /> */}
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
         <Footer />

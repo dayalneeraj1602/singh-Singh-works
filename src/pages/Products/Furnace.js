@@ -11,9 +11,9 @@ const Products = () => {
   const { dataFurnace: data } = useContext(DataContext);
   return (
     <>
-      <div className="pt-5 mt-5 ">
+      <div className="pt-5 mt-5 container">
         <div className="text-center fw-bold fs-2 p-1">Furnace</div>
-        <div className="row px-5 m-0">
+        <div className="row m-0">
           {data.map((item) => (
             <ProductCard item={item} key={item.id} />
           ))}
@@ -29,7 +29,7 @@ const ProductCard = ({ item }) => {
       <div
         className="card py-3 px-2"
         style={{
-          // border: "none",
+          border: "none",
           borderRadius: "7px",
           boxShadow: "0 0 15px rgba(0, 0, 0, 0.1)",
         }}

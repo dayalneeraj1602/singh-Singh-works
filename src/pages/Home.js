@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <section className="banner">
+      <section className="banner ">
         <div className="overlay"></div>
         <div className="punch-line">
           <h1 className="text-light">Innovating Furnaces </h1>
