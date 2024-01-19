@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// import { motion } from "framer-motion";
 
-
-const Fabrication = () => {
+const MetalFabricationWork = () => {
   const dataInfo = [
     {
       id: 1,
@@ -27,20 +27,15 @@ const Fabrication = () => {
         "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
       productTitle: "Fabrication Work",
       ProductDescription:
-        "High-temperature heating device used in industria{l processes for material processing.",
-    },
-    {
-      id: 4,
-      imgUrl: "",
-      productTitle: "Fabrication Work",
-      ProductDescription:
         "High-temperature heating device used in industrial processes for material processing.",
     },
   ];
   return (
     <div className="row my-5 pop container center cardsServices">
       <div className="col-12 center">
-        <span className="center fs-2  stroke p-1 ls-2">Fabrication Works</span>
+        <span className="center fs-2  stroke p-1 ls-2">
+          Metal Fabrication Work
+        </span>
         <div className="row">
           {dataInfo.map((item) => {
             return (
@@ -84,4 +79,4 @@ const Fabrication = () => {
   );
 };
 
-export default Fabrication;
+export default MetalFabricationWork;
