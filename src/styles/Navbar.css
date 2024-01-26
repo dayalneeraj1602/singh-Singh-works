@@ -85,7 +85,7 @@
   background: #fff;
   color: #3b3b3b;
   z-index: 999;
-  /* transition: 0.1s ease;  */
+  transition: 0.1s ease; 
 }
 /* .scrolled .nav-items a {
   color: #3b3b3b !important;
@@ -95,11 +95,10 @@
 } */
 
 .nav-items a.active {
-  /* Add your styles for the active link here */
-  color: #e74848; /* Change the text color for the active link */
+  color: #e74848;
 }
 
 .nav-items a.active::before,
 .nav-items a.active::after {
-  width: 100%; /* Set the width of the line for the active link */
+  width: 100%;
 }

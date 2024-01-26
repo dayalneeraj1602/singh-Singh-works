@@ -211,21 +211,21 @@ const DataProvider = ({ children }) => {
 
       automation: "Automation Grade : Automatic",
     },
-    {
-      id: 16,
-      img: "https://img.directindustry.com/images_di/photo-g/21762-14916681.jpg",
-      title: "Pre Heating Furnaces",
-      price: "Rs 80,000 / Unit",
-      material: "Melting Material : Copper",
-      power: "Power Source : Electric",
-      Loading: "Material Loading Capacity (T): 100Kg",
-      type: "Type Of Furnace : Tilt",
-      temp: "Max Temperature : 500-1000 degree Celsius",
-      rated: "Rated Power (KW) : 5 kW",
-      input: "Input Voltage (V) : 415 V",
+    // {
+    //   id: 16,
+    //   img: "https://img.directindustry.com/images_di/photo-g/21762-14916681.jpg",
+    //   title: "Pre Heating Furnaces",
+    //   price: "Rs 80,000 / Unit",
+    //   material: "Melting Material : Copper",
+    //   power: "Power Source : Electric",
+    //   Loading: "Material Loading Capacity (T): 100Kg",
+    //   type: "Type Of Furnace : Tilt",
+    //   temp: "Max Temperature : 500-1000 degree Celsius",
+    //   rated: "Rated Power (KW) : 5 kW",
+    //   input: "Input Voltage (V) : 415 V",
 
-      automation: "Automation Grade : Automatic",
-    },
+    //   automation: "Automation Grade : Automatic",
+    // },
   ];
   const dataServices = [
     {
@@ -234,7 +234,7 @@ const DataProvider = ({ children }) => {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxxMT1OenPFH_iQL7WHVv0PwrLD8DRIxB8Vu2iv2ZDtccDnGY4Ux_Uan1ddtGwya_5JpE",
       productTitle: "Furnace",
       ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
+        "Efficient high-temperature heating device tailored for industrial processes, ensuring optimal material processing and operational excellence.",
       link: "/services/furnace",
     },
     {
@@ -243,44 +243,26 @@ const DataProvider = ({ children }) => {
         "https://cdn.thefabricator.com/a/what-is-metal-fabrication-and-where-is-the-industry-headed--0.jpg",
       productTitle: "Furnace Parts",
       ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
+        "High-quality furnace parts designed to enhance the performance and longevity of industrial heating systems, supporting seamless material processing.",
       link: "/services/FurnaceParts",
     },
     {
       id: 3,
       imgUrl:
         "https://haryanarubberudyog.com/wp-content/uploads/2020/02/cnc-turning.jpg",
-      productTitle: "Leath",
+      productTitle: "Manufacturing",
       ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/leath",
+        "Comprehensive manufacturing services integrating cutting-edge technology to meet the diverse needs of industrial processes and material processing.",
+      link: "/services/Manufacturing",
     },
     {
       id: 4,
       imgUrl:
-        "https://5.imimg.com/data5/SELLER/Default/2022/5/DX/GA/UY/3043207/abb-three-phase-induction-motor-500x500.PNG",
-      productTitle: "Dc Motor & Panel",
+        "https://cdn.pixabay.com/photo/2016/01/13/14/16/factory-1137993__480.jpg",
+      productTitle: "Metal Tool Room",
       ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/dcmotor&panel",
-    },
-    {
-      id: 5,
-      imgUrl:
-        "	https://cdn.pixabay.com/photo/2016/01/13/14/16/factory-1137993__480.jpg",
-      productTitle: "Conveyor Belt",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/conveyorBelt",
-    },
-    {
-      id: 7,
-      imgUrl:
-        "https://cpimg.tistatic.com/05398323/b/5/High-Temperature-Alumina-Ceramic-Roller-For-Roller-Kiln.jpg",
-      productTitle: "Ceramic Roller",
-      ProductDescription:
-        "High-temperature heating device used in industrial processes for material processing.",
-      link: "/services/ceramic_roller",
+        "Specialized metal tool room offering high-temperature heating solutions for industrial processes, ensuring precision and efficiency in material processing.",
+      link: "/services/MetalToolRoom",
     },
   ];
 

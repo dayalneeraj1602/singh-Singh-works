@@ -1,6 +1,7 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
-  
+
 // import { motion } from "framer-motion";
 
 const Manufacturing = () => {
@@ -48,52 +49,50 @@ const Manufacturing = () => {
     {
       id: 6,
       imgUrl:
-      "https://file2.okorder.com/prodalbum/2014/12/16/e9eec9f3c22d628862540d9bf62f76bd.jpg",
+        "https://file2.okorder.com/prodalbum/2014/12/16/e9eec9f3c22d628862540d9bf62f76bd.jpg",
       productTitle: "Module Anckor",
       ProductDescription: "S.S 304 & S.S. 310",
     },
-    ];
+  ];
   return (
-    <div className="row my-5 pop container center cardsServices">
-      <div className="col-12 center">
-        <span className="center fs-2  stroke p-1 ls-2">Manufacturing</span>
-        <div className="row">
-          {dataInfo.map((item) => {
-            return (
-              <div className="col-lg-4 my-1 col-md-6 col-sm-12" key={item.id}>
-                <Link to={item.link} className="bg-grey ">
-                  <div
-                    initial={{
-                      y: item.id % 2 === 0 ? "-100vw" : "100vw",
-                      opacity: 0,
-                    }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.7, bounce: 0.5, type: "spring" }}
-                    whileHover={{ scale: 1.04 }}
-                    className="card  m-3  border-none pointer shadow-out"
-                  >
-                    <div className="card-body bg-grey border-none py-4">
-                      <div className="center p-2 m-2 serviceCardImg shadow-in my-3">
-                        <img
-                          className="img-fluid p-2 "
-                          src={item.imgUrl}
-                          alt="productImg"
-                        />
-                      </div>
+    <div className="container" style={{ margin: "7rem" }}>
+      <p className="text-center fs-2 fw-bold p-1 ls-2">Manufacturing</p>
+      <div className="row">
+        {dataInfo.map((item) => {
+          return (
+            <div className="col-lg-4 my-1 col-md-6 col-sm-12" key={item.id}>
+              <Link to={item.link} className="bg-grey ">
+                <div className="card  m-3  border-none pointer shadow-out">
+                  <div className="card-body bg-grey border-none py-4">
+                    <div className="center p-2 m-2 serviceCardImg shadow-in my-3">
+                      <LazyLoadImage
+                        style={{
+                          height: "300px",
+                          width: "300px",
+                          minHeight: "300px",
+                          borderRadius: "12px",
 
-                      <div className="card-title center fs-5 dim">
-                        {item.productTitle}
-                      </div>
-                      <p className="card-text px-3 text-secondary">
-                        {item.ProductDescription}
-                      </p>
+                          objectFit: "cover",
+                        }}
+                        effect="blur"
+                        className="img-fluid p-2 "
+                        src={item.imgUrl}
+                        alt="productImg"
+                      />
                     </div>
+
+                    <div className="card-title center fs-5 dim">
+                      {item.productTitle}
+                    </div>
+                    <p className="card-text px-3 text-secondary">
+                      {item.ProductDescription}
+                    </p>
                   </div>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

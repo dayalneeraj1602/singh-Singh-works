@@ -53,7 +53,7 @@ const Footer = () => {
           <div className="col-md-5 d-flex maps  flex-column">
             {/* Google Maps Integration - Get Directions */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3502.539691244997!2d77.37200957564254!3d28.613582875675014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDM2JzQ4LjkiTiA3N8KwMjInMjguNSJF!5e0!3m2!1sen!2sin!4v1705564294813!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.728712977207!2d77.38255797554164!3d28.60791427567829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5d3c20bedb7%3A0xc6237134267e953b!2sSingh%20Engineering%20Works!5e0!3m2!1sen!2sin!4v1706278332444!5m2!1sen!2sin"
               width="100%"
               height="300"
               style={{ borderRadius: " 8px" }}
@@ -61,7 +61,6 @@ const Footer = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-
             <div className="mt-4 text-start">
               <a
                 href={googleMapsLink}

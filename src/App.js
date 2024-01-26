@@ -18,6 +18,7 @@ import Leath from "./pages/Products/Leath";
 
 import MetalToolRoom from "./pages/Products/MetalToolRoom";
 import MetalFabricationWork from "./pages/Products/MetalFabricationWork";
+import SingleProduct from "./pages/SingleProduct";
 function App() {
   return (
     <>
@@ -32,9 +33,13 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/allproducts" element={<AllProducts />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/product/:id" element={<SingleProduct />} />
             <Route path="/services/furnace" element={<Furnace />} />
             <Route path="/services/ceramic_roller" element={<Ceramic />} />
             <Route path="/services/conveyorBelt" element={<Conveyor />} />
+            <Route path="/services/MetalToolRoom" element={<MetalToolRoom />} />
+            <Route path="/services/Manufacturing" element={<Manufacturing />} />
+
             {/* <Route path="/services/fabricationWork" element={<Fabrication />} /> */}
             {/* <Route path="/services/dcmotor&panel" element={<DcMotor />} /> */}
             <Route path="/services/leath" element={<Leath />} />

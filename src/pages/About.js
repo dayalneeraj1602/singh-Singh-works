@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="container my-5 pt-5">
+    <div className="container " style={{marginTop:"8.5rem"}}>
       <section className="about-us-section rounded ">
         <h4 className="mb-2">About Us</h4>
         <div className="s-border"></div>
