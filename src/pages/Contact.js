@@ -67,15 +67,17 @@ const Contact = () => {
             <div className="info">
               <div className="information">
                 <i className="fa-solid fa-location-dot me-2"></i>
-                <p>B-74, B Block, Sector 64, Noida Sector 64, Noida - 201301</p>
+                <p>B-16, B Block, Sector 64, Noida Sector 64, Noida - 201301</p>
               </div>
               <div className="information">
                 <i className="fa-solid fa-envelope me-2"></i>{" "}
-                <p>prabhudayal.001@gmail.com</p>
+                <p>prabhudayal.Singh@gmail.com</p>
+                <p>Singhengineeringworks.1999@gmail.com</p>
               </div>
               <div className="information">
                 <i className="fa-solid fa-phone me-2"></i>
-                <p>+91 6280421789</p>
+                <p>+91 9810802982</p>
+                <p>+91 9810804532</p>
               </div>
             </div>
 
