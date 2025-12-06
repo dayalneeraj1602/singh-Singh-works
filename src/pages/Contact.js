@@ -71,13 +71,17 @@ const Contact = () => {
               </div>
               <div className="information">
                 <i className="fa-solid fa-envelope me-2"></i>{" "}
-                <p>prabhudayal.Singh@gmail.com</p>
-                <p>Singhengineeringworks.1999@gmail.com</p>
+                <p>prabhudayal.Singh@gmail.com
+                  Singhengineeringworks.1999@gmail.com
+                </p>
+                
               </div>
               <div className="information">
                 <i className="fa-solid fa-phone me-2"></i>
-                <p>+91 9810802982</p>
-                <p>+91 9810804532</p>
+                <p>+91 9810802982
+                  +91 9810804532
+                </p>
+                
               </div>
             </div>
 
