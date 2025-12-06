@@ -46,7 +46,7 @@ const About = () => {
               <td>
                 <strong>Company CEO</strong>
               </td>
-              <td>Prabhudayal Singh</td>
+              <td>Prabhu dayal Singh</td>
             </tr>
             <tr>
               <td>
@@ -79,7 +79,7 @@ const About = () => {
               <td>
                 <strong>Banker</strong>
               </td>
-              <td>CITIZEN CO OP BANK LTD</td>
+              <td>Indian Bank</td>
             </tr>
             <tr>
               <td>
