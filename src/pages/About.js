@@ -9,7 +9,7 @@ const About = () => {
         <div className="m-border"></div>
         <p className="mb-4">
           Singh Engineering Works in Noida, Delhi, satisfactorily caters to the
-          demands of its customer base. Located at B-74, B Block, Sector
+          demands of its customer base. Located at B-16, B Block, Sector
           64-201301, the workshop has earned stamps like Jd Verified and Jd Pay,
           substantiating the credentials of the business. We strive to provide a
           positive experience through our offerings, and our accepted modes of
@@ -17,7 +17,7 @@ const About = () => {
           seamless.
         </p>
         <p className="m-0">
-          We are a machine workshop situated in Sector 67, specializing in
+          We are a machine workshop situated in Sector 64, specializing in
           various categories, including fabrication work, metalwork, and
           furnaces of the heating zone. For the address and contact details,
           please refer to the information above.
@@ -46,7 +46,7 @@ const About = () => {
               <td>
                 <strong>Company CEO</strong>
               </td>
-              <td>Prabhudayal Singh</td>
+              <td>Prabhu Dayal Singh</td>
             </tr>
             <tr>
               <td>
@@ -79,7 +79,7 @@ const About = () => {
               <td>
                 <strong>Banker</strong>
               </td>
-              <td>CITIZEN CO OP BANK LTD</td>
+              <td>Indian Bank</td>
             </tr>
             <tr>
               <td>
