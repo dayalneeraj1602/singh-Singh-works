@@ -17,9 +17,9 @@ import Conveyor from "./pages/Products/Conveyor";
 import Leath from "./pages/Products/Leath";
 
 import MetalToolRoom from "./pages/Products/MetalToolRoom";
-import MetalFabricationWork from "./pages/Products/MetalFabricationWork";
+
 import SingleProduct from "./pages/SingleProduct";
-import { Analytics } from "@vercel/analytics/react";
+
 function App() {
   return (
     <>
@@ -50,7 +50,6 @@ function App() {
         </div>
         <Footer />
       </Router>
-      <Analytics />
     </>
   );
 }
