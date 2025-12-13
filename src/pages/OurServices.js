@@ -52,7 +52,7 @@ const OurServices = () => {
                       className="overlays"
                       style={{
                         backgroundImage:
-                          hover == item.id && `url(${item.imgUrl})`,
+                          hover === item.id && `url(${item.imgUrl})`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         filter: hover === item.id ? "blur(2px)" : "none",

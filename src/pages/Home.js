@@ -13,10 +13,6 @@ we've secured a strong market position.`;
 
 const Home = () => {
   const [infoText, setInfoText] = useState("");
-  const [scrollIndex, setScrollIndex] = useState(0);
-
-  const { dataFurnace: dataInfo } = useContext(DataContext);
-  const { dataServices } = useContext(DataContext);
 
   useEffect(() => {
     const intervalId = setTimeout(() => {
@@ -32,17 +28,7 @@ const Home = () => {
 
     return () => clearInterval(intervalId);
   }, [infoText]);
-  const handlePrevClick = () => {
-    setScrollIndex((prevIndex) =>
-      prevIndex > 0 ? prevIndex - 1 : dataInfo.length - 4
-    );
-  };
 
-  const handleNextClick = () => {
-    setScrollIndex((prevIndex) =>
-      prevIndex < dataInfo.length - 4 ? prevIndex + 1 : 0
-    );
-  };
   return (
     <div className="home">
       <section className="banner ">

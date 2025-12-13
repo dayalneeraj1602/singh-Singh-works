@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
-
 import Carousel from "react-grid-carousel";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "../styles/OurProducts.css";
 import { DataContext } from "../Context/DataContext";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 const ImageGallery = () => {
   const { dataFurnace: data } = useContext(DataContext);
 

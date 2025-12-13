@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import { createContext } from "react";
 
 const DataContext = createContext();
 
@@ -205,7 +205,6 @@ const DataProvider = ({ children }) => {
       power: "Power Source : Electric",
       Loading: "Material Loading Capacity (T): 100Kg",
       type: "Type Of Furnace : Fix",
-      Loading: "Material Loading Capacity(T) : 2-4 Ton",
       rated: "Rated Power (KW) :80 kW",
       input: "Input Voltage (V) : 440 V",
 

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { DataContext } from "../Context/DataContext";
 import { useParams } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -8,7 +8,7 @@ const SingleProduct = () => {
   const { dataFurnace: data } = useContext(DataContext);
 
   console.log(id);
-  const item = data?.find((item) => item.id == id);
+  const item = data?.find((item) => item.id === id);
 
   console.log(item);
   return (
