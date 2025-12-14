@@ -4,8 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px; /* Adjust padding as needed */
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  padding: 10px 50px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   background: transparent;
   top: 0px;
@@ -20,17 +20,14 @@
   align-items: center;
   font-weight: lighter;
   text-decoration: none;
-  color: #000; /* Set the text color */
+  color: #000;
 }
 
 .navbar-brand img {
-  width: 55px; /* Set the width of your logo */
+  width: 55px;
   height: auto;
-  margin-right: 10px; /* Add margin to separate the logo from text */
+  margin-right: 10px;
 }
-/* .navbar-brand span {
-  color: inherit;
-} */
 
 .nav-items {
   display: flex;
@@ -39,25 +36,20 @@
 .nav-items a {
   text-decoration: none;
   color: inherit;
-  margin-right: 30px; /* Add margin between each nav item */
-  font-weight: 500; /* Set the font weight */
-  font-size: 18px; /* Set the font size */
+  margin-right: 30px;
+  font-weight: 500;
+  font-size: 18px;
   position: relative;
   transition: color 0.2s ease;
 }
 
-/* .nav-items a::before, */
 .nav-items a::after {
   content: "";
   position: absolute;
-  height: 2px; /* Set the initial height of the line */
+  height: 2px;
   width: 0;
   filter: contrast(2.8);
-  background: linear-gradient(
-    135deg,
-    #e74848 80%,
-    #ffffff
-  ); /* Set the gradient color of the line */
+  background: linear-gradient(135deg, #e74848 80%, #ffffff);
   transition: width 0.2s ease;
 }
 
@@ -78,21 +70,16 @@
 }
 
 .nav-items a:hover::after {
-  width: 100%; /* Set the width of the line on hover */
+  width: 100%;
 }
+
 .scrolled {
   backdrop-filter: blur(7px);
   background: #fff;
   color: #3b3b3b;
   z-index: 999;
-  transition: 0.1s ease; 
+  transition: 0.1s ease;
 }
-/* .scrolled .nav-items a {
-  color: #3b3b3b !important;
-}
-.scrolled .navbar-brand span {
-  color: #3b3b3b !important;
-} */
 
 .nav-items a.active {
   color: #e74848;
@@ -101,4 +88,119 @@
 .nav-items a.active::before,
 .nav-items a.active::after {
   width: 100%;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  margin-right: 20px;
+}
+
+.hamburger span {
+  width: 20px;
+  height: 2px;
+  background-color: currentColor;
+  margin: 2px 0;
+  transition: 0.3s;
+  /* color: gray; */
+  z-index: 1001;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .sticky-header {
+    padding: 10px 20px;
+  }
+
+  .navbar-brand.ms-5 {
+    margin-left: 0 !important;
+  }
+
+  .navbar-brand span {
+    font-size: 14px !important;
+  }
+
+  .navbar-brand img {
+    width: 40px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-items {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 !important;
+  }
+
+  .nav-items.mobile-open {
+    right: 0;
+  }
+
+  .nav-items a {
+    margin: 20px 0;
+    font-size: 20px;
+    color: #3b3b3b !important;
+  }
+
+  .nav-items a::after {
+    left: 0;
+    transform: none;
+  }
+
+  .scrolled .nav-items {
+    background: #fff;
+  }
+
+  /* Overlay when menu is open */
+  .nav-items.mobile-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(236, 233, 233, 0.5);
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-brand span {
+    font-size: 14px !important;
+  }
+
+  .navbar-brand img {
+    width: 40px;
+  }
 }

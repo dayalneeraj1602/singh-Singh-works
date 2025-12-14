@@ -4,6 +4,7 @@ import "../styles/Navbar.css";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -24,6 +25,15 @@ const Navbar = () => {
   const isAbout = location.pathname === "/about";
   const isContact = location.pathname === "/contact";
 
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+    window.scrollTo(0, 0);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <div
       className={`navbar d-flex shadow-out pop sticky-header ${
@@ -34,7 +44,6 @@ const Navbar = () => {
           : isScrolled >= 50 && isHome && "text-dark"
       }`}
     >
-      {/* ${isHome ? "home-page" : ""}` */}
       <div className="navbar-brand d-inline-block fs-1 ls-2">
         <Link className="navbar-brand brand ms-5 fw-bold fs-4 d-flex" to="/">
           <div className="logo mx-2 d-flex">
@@ -49,24 +58,34 @@ const Navbar = () => {
           </div>
         </Link>
       </div>
-      <div className="nav-items me-5">
+
+      {/* Hamburger Menu Button */}
+      <button
+        className={`hamburger ${isMobileMenuOpen ? "active" : ""}`}
+        onClick={toggleMobileMenu}
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      {/* Navigation Items */}
+      <div
+        className={`nav-items me-5 ${isMobileMenuOpen ? "mobile-open" : ""}`}
+      >
         <Link
           to="/"
           title="Home"
           className={isHome ? "active" : ""}
-          onClick={() => {
-            setIsScrolled(null);
-            window.scrollTo(0, 0);
-          }}
+          onClick={handleLinkClick}
         >
           Home
         </Link>
         <Link
           to="/products"
           title="Products"
-          onClick={() => {
-            window.scrollTo(0, 0);
-          }}
+          onClick={handleLinkClick}
           className={isProducts ? "active" : ""}
         >
           Products
@@ -74,9 +93,7 @@ const Navbar = () => {
         <Link
           to="/services"
           title="Services"
-          onClick={() => {
-            window.scrollTo(0, 0);
-          }}
+          onClick={handleLinkClick}
           className={isServices ? "active" : ""}
         >
           Services
@@ -85,10 +102,7 @@ const Navbar = () => {
           to="/about"
           title="About us"
           className={isAbout ? "active" : ""}
-          onClick={() => {
-            setIsScrolled(true);
-            window.scrollTo(0, 0);
-          }}
+          onClick={handleLinkClick}
         >
           About us
         </Link>
@@ -96,10 +110,7 @@ const Navbar = () => {
           to="/contact"
           title="Contact Us"
           className={isContact ? "active" : ""}
-          onClick={() => {
-            setIsScrolled(true);
-            window.scrollTo(0, 0);
-          }}
+          onClick={handleLinkClick}
         >
           Contact
         </Link>
@@ -108,4 +119,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar
+export default Navbar;

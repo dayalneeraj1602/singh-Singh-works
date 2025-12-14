@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { useEffect, useState } from "react";
 import "../styles/Contact.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
@@ -71,17 +71,14 @@ const Contact = () => {
               </div>
               <div className="information">
                 <i className="fa-solid fa-envelope me-2"></i>{" "}
-                <p>prabhudayal.Singh@gmail.com
+                <p>
+                  prabhudayal.Singh@gmail.com
                   Singhengineeringworks.1999@gmail.com
                 </p>
-                
               </div>
               <div className="information">
                 <i className="fa-solid fa-phone me-2"></i>
-                <p>+91 9810802982
-                  +91 9810804532
-                </p>
-                
+                <p>+91 9810802982 +91 9810804532</p>
               </div>
             </div>
 
