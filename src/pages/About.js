@@ -64,7 +64,7 @@ const About = () => {
               <td>
                 <strong>Annual Turnover </strong>
               </td>
-              <td>Upto 50 lakh</td>
+              <td>Upto 40 lakh</td>
             </tr>
           </tbody>
         </table>
