@@ -26,25 +26,21 @@ const Home = () => {
       }
     }, 6);
 
-    return () => clearInterval(intervalId);
+    return () => clearTimeout(intervalId);
   }, [infoText]);
 
   return (
     <div className="home">
-      <section className="banner ">
+      <section className="banner">
         <div className="overlay"></div>
-        <div className="punch-line w-100 ">
-          <h1 className="text-light">Innovating Furnaces </h1>
-          <h1>Since 2001.</h1>
-          <div className="d-flex justify-content-center">
-            <p
-              className="info text-start mb-5"
-              style={{ height: "3rem", width: "50%" }}
-            >
-              {infoText}
-            </p>
-          </div>
-          <div className="Explore my-5">
+
+        <div className="punch-line">
+          <h1 className="headline">Innovating Furnaces</h1>
+          <h1 className="headline since">Since 2001.</h1>
+
+          <p className="info text-start">{infoText}</p>
+
+          <div className="Explore">
             <Link
               to="/products"
               style={{ color: "inherit", textDecoration: "none" }}
@@ -54,8 +50,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* -----------Images scrollable --------- */}
 
+      {/* -----------Sections below hero--------- */}
       <OurProducts />
       <WhyUs />
       <OurServices />

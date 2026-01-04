@@ -1,91 +1,123 @@
-/* Add this CSS to your Home.css file */
-
+/* Layout wrapper */
 .home {
-  /* height: 100vh; */
-  padding-top: 80px; /* Adjust the padding as needed based on your navbar height */
-  text-align: center; /* Center the text if needed */
+  padding-top: 80px; 
+  text-align: center;
   position: relative;
 }
 
+/* Hero section */
 .banner {
   background-image: url("../../public/bg.jpg");
-
-  filter: saturate(90%) contrast(80%); /* Adjust values as needed */
-  background-size: cover; /* Ensure the image covers the entire container */
-  background-position: center; /* Center the image */
+  filter: saturate(90%) contrast(80%);
+  background-size: cover;
+  background-position: center;
   position: relative;
   height: 100vh;
   margin-top: -5rem;
   padding-top: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.punch-line {
+/* Dark overlay on image */
+.overlay {
   position: absolute;
-  top: 58%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* Text container */
+.punch-line {
+  position: relative;
+  max-width: 800px;
   text-align: center;
-}
-.arrow-down img {
-  margin-top: 2rem;
-  animation: bounce 2s infinite; /* You can adjust the duration and other parameters */
+  color: #ffffff;
+  padding: 0 1rem;
 }
 
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-20px); /* Adjust the bounce height as needed */
-  }
-  60% {
-    transform: translateY(-10px); /* Adjust the bounce height as needed */
-  }
-}
-.punch-line h1:first-child {
-  font-weight: 500; /* Lighter font weight for the first h1 */
+/* Headings */
+.headline {
+  font-weight: 500;
   font-size: 4rem;
+  line-height: 1.1;
+  color: #ffffff;
 }
 
-/* Add this CSS to your Home.css file */
-
-.punch-line h1:nth-child(2) {
-  font-weight: 900; /* Bolder font weight for the second h1 */
+.headline.since {
+  font-weight: 900;
   font-size: 4rem;
-  background: linear-gradient(
-    to right,
-    #ff0000,
-    #fdfdfd
-  ); /* Replace with your desired gradient or image */
+  background: linear-gradient(to right, #ff0000, #fdfdfd);
   filter: contrast(2.5) saturate(2);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.punch-line p {
-  color: #ffffff; /* Different color for the p tag */
-  margin-top: 10px; /* Adjust margin as needed */
+/* Paragraph */
+.info {
+  color: #ffffff;
+  margin: 1.5rem auto 0;
   font-size: 1.2rem;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.65);
+  max-width: 90%;
+  height: 5rem;
 }
 
-/* Additional styles for the text if desired */
-.banner h3 {
-  font-size: 24px;
-  color: #fff; /* Set the text color to white or another suitable color */
-  /* Add any other styles as needed */
+/* Button wrapper */
+.Explore {
+  margin-top: 3rem;
 }
 
+/* Optional arrow animation if you add it back */
+.arrow-down img {
+  margin-top: 2rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ---------- MOBILE STYLES ---------- */
+@media (max-width: 768px) {
+  .banner {
+    height: 100vh;
+    margin-top: 0;
+    padding-top: 4rem;
+  }
+  .home{
+    padding-top: 0px;
+  }
+
+  .punch-line {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .headline {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+  }
+
+  .headline.since {
+    font-size: clamp(2.2rem, 7vw, 3rem);
+  }
+
+  .info {
+    max-width: 100%;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .Explore {
+    margin-top: 10rem;
+  }
+}
