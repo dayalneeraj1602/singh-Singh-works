@@ -43,7 +43,7 @@ const Footer = () => {
               <div className="ps-2">
                 <p>
                   {" "}
-                  <i className="me-2 fa-solid fa-clock"></i>Mon - Sat: 9:00 am -
+                  <i className="me-2 fa-solid fa-clock"></i>Monday - Saturday: 9:00 am -
                   5:30 pm
                 </p>
                 <p>
