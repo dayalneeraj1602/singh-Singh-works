@@ -199,10 +199,19 @@ textarea.input {
 }
 
 .contact-info {
-  padding: 2.3rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+
+  padding: 2.3rem 2rem;
   position: relative;
 }
 
+.contact-info .bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 2rem;
+}
 .contact-info .title {
   color: #f35656;
 }
@@ -216,10 +225,55 @@ p {
 }
 .information {
   display: flex;
-  color: #555;
-  margin: 0.7rem 0;
+  align-items: flex-start; 
+  gap: 10px;
+}
+.information-email{
+
+
+}
+.information-email .info-email {
+  display: flex;
   align-items: center;
-  font-size: 0.95rem;
+  margin: 3px 0;
+
+}
+.information-phone .info-phone {
+  display: flex;
+  align-items: center;
+  margin: 3px 0;
+
+}
+
+.information i {
+  flex-shrink: 0; 
+  margin-top: 4px ;
+  color: #333;
+  margin-right: 4px !important;
+
+}
+
+.info-text {
+  display: block;
+  line-height: 1.4;
+  word-break: break-word;
+  color: #333;
+  font-size: medium;
+  white-space: normal;
+}
+
+/* MOBILE FIX */
+@media (max-width: 480px) {
+  .information {
+    font-size: 0.85rem;
+  }
+
+  .info-text {
+    line-height: 1.35;
+  }
+  .container-contact{
+    padding: 1rem;
+  }
 }
 
 .icon {
@@ -228,6 +282,7 @@ p {
 }
 
 .social-media {
+margin-top: 2rem;
   padding: 2rem 0 0 0;
 }
 

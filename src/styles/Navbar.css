@@ -105,7 +105,7 @@
 .hamburger span {
   width: 20px;
   height: 2px;
-  background-color: currentColor;
+  background-color: #7a7a7a;
   margin: 2px 0;
   transition: 0.3s;
   /* color: gray; */

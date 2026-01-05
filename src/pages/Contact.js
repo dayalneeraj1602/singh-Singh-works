@@ -61,42 +61,61 @@ const Contact = () => {
 
         <div className="form">
           <div className="contact-info">
-            <h3 className="title">Let's get in touch</h3>
-            <p className="text">Feel free to leave a message.</p>
-
-            <div className="info">
-              <div className="information">
-                <i className="fa-solid fa-location-dot me-2"></i>
-                <p>B-16, B Block, Sector 64, Noida Sector 64, Noida - 201301</p>
-              </div>
-              <div className="information">
-                <i className="fa-solid fa-envelope me-2"></i>{" "}
-                <p>
-                  prabhudayal.Singh@gmail.com
-                  Singhengineeringworks.1999@gmail.com
-                </p>
-              </div>
-              <div className="information">
-                <i className="fa-solid fa-phone me-2"></i>
-                <p>+91 9810802982 +91 9810804532</p>
-              </div>
+            <div className="top">
+              <h3 className="title">Let's get in touch</h3>
+              <p className="text">Feel free to leave a message.</p>
             </div>
 
-            <div className="social-media">
-              <p>Connect with us :</p>
-              <div className="social-icons">
-                <a href="#">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href="#">
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a href="#">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#">
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
+            <div className="bottom">
+              <div className="info-contact">
+                <div className="information">
+                  <i className="fa-solid fa-location-dot me-2"></i>
+                  <span className="info-text">
+                    B-16, B Block, Sector 64, Noida Sector 64, Noida – 201301
+                  </span>
+                </div>
+                <div className="information-email">
+                  <span className="info-email">
+                    <i className="fa-solid fa-envelope me-2"></i>
+                    <a href="mailto:prabhudayal.Singh@gmail.com">
+                      prabhudayal.Singh@gmail.com
+                    </a>
+                  </span>
+
+                  <span className="info-email">
+                    <i className="fa-solid fa-envelope me-2"></i>
+                    <a href="mailto:singhengineeringworks.1999@gmail.com">
+                      singhengineeringworks.1999@gmail.com
+                    </a>
+                  </span>
+                </div>
+                <div className="information-phone">
+                  <div className="info-phone">
+                    <i className="fa-solid fa-phone me-2"></i>
+                    <a href="tel:+919810802982">+91 9810802982</a>
+                  </div>
+                  <div className="info-phone">
+                    <i className="fa-solid fa-phone me-2"></i>
+                    <a href="tel:+919810804532">+91 9810804532</a>
+                  </div>
+                </div>
+              </div>
+              <div className="social-media">
+                <p>Connect with us :</p>
+                <div className="social-icons">
+                  <a href="#">
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                  <a href="#">
+                    <i className="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
