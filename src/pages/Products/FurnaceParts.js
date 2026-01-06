@@ -101,8 +101,8 @@ const FurnaceParts = () => {
     },
     {
       id: 13,
-      imgUrl: "	https://m.media-amazon.com/images/I/61warq4+q4L._SX425_.jpg",
-      productTitle: "Blanket",
+      imgUrl: "https://2.wlimg.com/product_images/bc-full/2021/8/207467/cold-face-insulation-bricks-1629280462-5024883.jpeg",
+      productTitle: "Ceramic Fiber Board",
       // ProductDescription:
       //   "High-temperature heating device used in industrial processes for material processing.",
     },
@@ -114,13 +114,13 @@ const FurnaceParts = () => {
       // ProductDescription:
       //   "High-temperature heating device used in industrial processes for material processing.",
     },
-    {
-      id: 15,
-      imgUrl:
-        "	https://5.imimg.com/data5/PL/SF/MY-2506826/supercera-ceramic-fiber-500x500.jpg",
-      productTitle: "Fiber Wool",
-      Brand: "Morgapa,Supercera,Span",
-    },
+    // {
+    //   id: 15,
+    //   imgUrl:
+    //     "	https://5.imimg.com/data5/PL/SF/MY-2506826/supercera-ceramic-fiber-500x500.jpg",
+    //   productTitle: "Fiber Wool",
+    //   Brand: "Morgapa,Supercera,Span",
+    // },
   ];
   return (
     <div className="container " style={{ margin: "7rem" }}>

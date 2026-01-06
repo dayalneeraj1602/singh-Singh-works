@@ -17,7 +17,7 @@ const Manufacturing = () => {
     {
       id: 2,
       imgUrl:
-        "	https://th.bing.com/th/id/OIP.eThAzxdBhIBstb4PooSKWgHaHa?pid=ImgDet&w=205&h=205&c=7&dpr=1.3",
+        "https://www.processparameters.co.uk/wp-content/uploads/2019/07/explaining-how-does-a-thermocouple-work.jpg",
       productTitle: "Thermocopal",
       // ProductDescription:
       //   "Temperature Sensor",
@@ -33,8 +33,8 @@ const Manufacturing = () => {
     {
       id: 4,
       imgUrl:
-        "https://media.gettyimages.com/id/651480125/photo/man-melting-iron-at-factory.jpg?s=612x612&w=0&k=20&c=n4UnY4xoQY68fN_y4Kvd98VLOmhAmFtWNRJ1mbyREh8=",
-      productTitle: "Bearing Bolt",
+        "https://image.made-in-china.com/2f0j00KwUiuAphhfqQ/High-Electrical-Insulating-Iroperties-Alumina-Tube-Ceramic-Pipe-Ceramic-Rollers-for-Glass-Tempering-Furnace-Kiln.jpg",
+      productTitle: "Ceramic Roller",
       // ProductDescription:
       //   "High-temperature heating device used in industrial processes for material processing.",
     },
