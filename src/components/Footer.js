@@ -26,7 +26,7 @@ const Footer = () => {
                 </p>
                 <p>
                   <i className="fa-solid fa-envelope me-2"></i>{" "}
-                  singhengineeringworks.1999@gmail.com
+                  singhengineeringworks.1978@gmail.com
                 </p>
                 <p>
                   <i className="fa-solid fa-phone me-2"></i> +91 9810802982
