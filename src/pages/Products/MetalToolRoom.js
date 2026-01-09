@@ -46,6 +46,14 @@ const MetalToolRoom = () => {
       // ProductDescription:
       //   "High-temperature heating device used in industrial processes for material processing.",
     },
+    {
+      id: 6,
+      imgUrl:
+        "https://toolbox.igus.com/wp-content/uploads/2024/06/3DP_PROD_3D_printed_gears_iglidur_i3_DE_1.jpg",
+      productTitle: "Gear Work",
+      // ProductDescription:
+      //   "High-temperature heating device used in industrial processes for material processing.",
+    },
   ];
   return (
     <div className="container " style={{margin:"7rem"}}>
