@@ -84,8 +84,8 @@ const Contact = () => {
 
                   <span className="info-email">
                     <i className="fa-solid fa-envelope me-2"></i>
-                    <a href="mailto:singhengineeringworks.1999@gmail.com">
-                      singhengineeringworks.1999@gmail.com
+                    <a href="mailto:singhengineeringworks.1978@gmail.com">
+                      singhengineeringworks.1978@gmail.com
                     </a>
                   </span>
                 </div>
