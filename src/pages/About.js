@@ -6,12 +6,12 @@ const About = () => {
         <div className="s-border"></div>
         <div className="m-border"></div>
         <p className="mb-4">
-          Singh Engineering Works in Noida, Delhi, satisfactorily caters to the
+          Singh Engineering Works in Noida and NCR satisfactorily caters to the
           demands of its customer base. Located at B-16, B Block, Sector
-          64-201301, the workshop has earned stamps like Jd Verified and Jd Pay,
-          substantiating the credentials of the business. We strive to provide a
+          64-201301, the workshop has earned stamps like Just dail Verified and IndiaMart
+          Assured,substantiating the credentials of the business. We strive to provide a
           positive experience through our offerings, and our accepted modes of
-          payment, such as Cash, make every business transaction easy and
+          payment, such as Cash,upi and Bank transfer, make every business transaction easy and
           seamless.
         </p>
         <p className="m-0">

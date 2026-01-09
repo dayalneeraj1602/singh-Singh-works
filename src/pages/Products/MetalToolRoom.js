@@ -74,10 +74,10 @@ const MetalToolRoom = () => {
                       />
                     </div>
 
-                    <div className="card-title center fs-5 dim">
+                    <div className="card-title text-center fs-5 fw-bold dim">
                       {item.productTitle}
                     </div>
-                    <p className="card-text px-3 text-secondary">
+                    <p className="card-text text-center px-3 text-secondary">
                       {item.ProductDescription}
                     </p>
                   </div>
