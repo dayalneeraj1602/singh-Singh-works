@@ -33,10 +33,9 @@ const MetalToolRoom = () => {
     {
       id: 4,
       imgUrl:
-        "	https://www.waldrichsiegen.com/fileadmin/ws/img/products/roll-grinder-profigrind-800k.jpg",
+        "	https://www.bosch-pt.co.in/binary/ocsmedia/optimized/full/o396235v117_gws_800_appl_05_T6.jpg",
       productTitle: "Granding Work",
       // ProductDescription:
-      //   "High-temperature heating device used in industrial processes for material processing.",
     },
     {
       id: 5,
