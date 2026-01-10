@@ -169,6 +169,20 @@ const DataProvider = ({ children }) => {
 
       // automation: "Automation Grade : Automatic",
     },
+    {
+      id: 13,
+      img: "https://keramo.in/upload/p/SHUTTLE%20KILN.jpg",
+      title: "Shuttle Klin  Furnaces",
+      // price: "Rs 7 Lakhs / Unit",
+      // material: "Melting Material : Copper",
+      // power: "Power Source : Electric",
+      // Loading: "Material Loading Capacity (T): 100Kg",
+      // type: "Type Of Furnace : Fix",
+      // rated: "Rated Power (KW) :80 kW",
+      // input: "Input Voltage (V) : 440 V",
+
+      // automation: "Automation Grade : Automatic",
+    },
     // {
     //   id: 16,
     //   img: "https://img.directindustry.com/images_di/photo-g/21762-14916681.jpg",
