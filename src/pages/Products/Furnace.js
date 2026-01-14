@@ -31,7 +31,7 @@ const Products = () => {
           font-size: 2rem;
           font-weight: bold;
           margin-bottom: 3rem;
-          color: #000;
+          color: #f35656;
         }
 
         .products-grid {
