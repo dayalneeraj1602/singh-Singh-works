@@ -15,85 +15,121 @@ const Services = () => {
     <>
       {/* Local styles only for this component */}
       <style>{`
-        .services-row {
-          margin: 0;
-          padding: 0 3rem;
+        .services-container {
+          min-height: 100vh;
+          background-color: #f8f9fa;
+          padding: 2rem 1rem;
+        }
+
+        .services-section {
+          max-width: 1200px;
+          margin: 0 auto;
+          margin-top: 5rem;
+          margin-bottom: 4rem;
+        }
+
+        .services-title {
+          text-align: center;
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 3rem;
+          color: #000;
+        }
+
+        .services-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          justify-items: center;
         }
 
         .service-link {
           display: block;
-          transition: all 0.3s ease-in-out;
-        }
-
-        .service-link:hover {
-          transform: translateY(-10px) scale(1.02);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+          text-decoration: none;
+          color: inherit;
+          width: 100%;
         }
 
         .service-card {
-          border-radius: 20px;
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          background-color: white;
+          border-radius: 12px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          padding: 1.5rem;
+          max-width: 350px;
+          width: 100%;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
           border: none;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
         }
 
-        .service-card-body {
-          flex-grow: 1;
+        .service-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-img-container {
+          height: 300px;
+          width: 100%;
+          overflow: hidden;
+          border-radius: 8px;
+          background-color: #f0f0f0;
           display: flex;
-          flex-direction: column;
-          padding: 1.5rem;
+          align-items: center;
+          justify-content: center;
         }
 
         .service-img {
-          height: 300px;
-          min-height: 300px;
           width: 100%;
+          height: 100%;
           object-fit: cover;
-          border-radius: 20px;
-          flex-shrink: 0;
         }
 
         .service-title {
-          font-size: 1.25rem;
-          font-weight: 600;
-          color: #666;
-          margin-top: 1rem;
-          margin-bottom: 0.75rem;
           text-align: center;
+          font-size: 1.25rem;
+          font-weight: bold;
+          margin-top: 1rem;
+          color: #000;
         }
 
         .service-text {
-          color: #888;
-          line-height: 1.6;
-          flex-grow: 1;
+          text-align: center;
+          padding: 0 1rem;
+          color: #6c757d;
+          font-size: 0.9rem;
+          margin-top: 0.5rem;
         }
 
-        /* Mobile: reduce X padding */
+        /* Mobile responsive */
         @media (max-width: 768px) {
-          .services-row {
-            padding: 0 1rem;
-          }
-
-          .service-card-body {
+          .services-container {
             padding: 1rem;
           }
 
-          .service-img {
+          .services-section {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+          }
+
+          .services-title {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+          }
+
+          .service-img-container {
             height: 230px;
-            min-height: 230px;
           }
         }
       `}</style>
 
-      <div className="pt-5 mt-5">
-        <div className="text-center fw-bold fs-2 p-1">Our Services</div>
-
-        <div className="row services-row">
-          {dataInfo.map((item) => (
-            <ServiceCard key={item.id} data={item} />
-          ))}
+      <div className="services-container">
+        <div className="services-section">
+          <h2 className="services-title">Our Services</h2>
+          <div className="services-grid">
+            {dataInfo.map((item) => (
+              <ServiceCard key={item.id} data={item} />
+            ))}
+          </div>
         </div>
       </div>
     </>
@@ -102,49 +138,34 @@ const Services = () => {
 
 const ServiceCard = ({ data }) => {
   return (
-    <div
-      className="col-12 col-md-6 col-lg-4 my-3"
-      style={{ cursor: "pointer" }}
+    <Link
+      to={data.link}
+      onClick={() =>
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        })
+      }
+      className="service-link"
     >
-      <Link
-        to={data.link}
-        onClick={() =>
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth",
-          })
-        }
-        className="service-link b-20 bg-grey"
-        style={{
-          color: "inherit",
-          textDecoration: "none",
-        }}
-      >
-        <div className="card service-card">
-          <div className="card-body service-card-body b-20 bg-grey border-none">
-            <LazyLoadComponent>
-              <div className="center furnaceImg p-2 mb-3">
-                <LazyLoadImage
-                  src={data.imgUrl || "https://i.stack.imgur.com/y9DpT.jpg"}
-                  className="img-fluid p-2 service-img"
-                  alt={data.productTitle}
-                  effect="blur"
-                  threshold={100}
-                />
-              </div>
-            </LazyLoadComponent>
-
-            <div className="card-title center fs-5 dim service-title">
-              {data.productTitle}
-            </div>
-            <p className="card-text text-secondary service-text">
-              {data.ProductDescription}
-            </p>
+      <div className="service-card">
+        <LazyLoadComponent>
+          <div className="service-img-container">
+            <LazyLoadImage
+              src={data.imgUrl || "https://i.stack.imgur.com/y9DpT.jpg"}
+              className="service-img"
+              alt={data.productTitle}
+              effect="blur"
+              threshold={100}
+            />
           </div>
-        </div>
-      </Link>
-    </div>
+        </LazyLoadComponent>
+
+        <h3 className="service-title">{data.productTitle}</h3>
+        <p className="service-text">{data.ProductDescription}</p>
+      </div>
+    </Link>
   );
 };
 

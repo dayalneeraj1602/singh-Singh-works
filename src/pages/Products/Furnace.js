@@ -15,85 +15,103 @@ const Products = () => {
       {/* Local styles only for Products */}
       <style>{`
         .products-container {
-          padding-top: 3rem;
-          padding-bottom: 3rem;
+          min-height: 100vh;
+          background-color: #f8f9fa;
+          padding: 2rem 1rem;
         }
 
-        .products-row {
-          margin: 0;
+        .products-section {
+          max-width: 1200px;
+          margin: 0 auto;
+          margin-top: 5rem;
         }
 
-        .product-col {
-          cursor: pointer;
+        .products-title {
+          text-align: center;
+          font-size: 2rem;
+          font-weight: bold;
+          margin-bottom: 3rem;
+          color: #000;
+        }
+
+        .products-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          justify-items: center;
         }
 
         .product-card {
+          background-color: white;
+          border-radius: 12px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          padding: 1.5rem;
+          max-width: 350px;
+          width: 100%;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
           border: none;
-          border-radius: 7px;
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          transition: all 0.3s ease-in-out;
         }
 
         .product-card:hover {
-          transform: translateY(-10px) scale(1.02);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+          transform: translateY(-5px);
+          box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
         }
 
-        .product-card-body {
-          flex-grow: 1;
+        .product-img-container {
+          height: 300px;
+          width: 100%;
+          overflow: hidden;
+          border-radius: 8px;
+          background-color: #f0f0f0;
           display: flex;
-          flex-direction: column;
-          padding: 1.5rem;
+          align-items: center;
+          justify-content: center;
         }
 
         .product-img {
-          height: 300px;
           width: 100%;
+          height: 100%;
           object-fit: cover;
-          border-radius: 12px;
         }
 
         .product-title {
           text-align: center;
+          font-size: 1.25rem;
+          font-weight: bold;
           margin-top: 1rem;
-          margin-bottom: 0.75rem;
+          color: #000;
         }
 
-        .product-text {
-          margin-bottom: 0.2rem;
-          line-height: 1.5;
-        }
-
-        /* Mobile: reduce side padding + image height */
+        /* Mobile responsive */
         @media (max-width: 768px) {
           .products-container {
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-          }
-
-          .products-row {
-            padding: 0 1rem;
-          }
-
-          .product-card-body {
             padding: 1rem;
           }
 
-          .product-img {
+          .products-section {
+            margin-top: 2rem;
+          }
+
+          .products-title {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+          }
+
+          .product-img-container {
             height: 230px;
           }
         }
       `}</style>
 
-      <div className="pt-5 mt-5 container products-container">
-        <div className="text-center fw-bold fs-2 p-1">Furnace</div>
-        <div className="row products-row">
-          {data.map((item) => (
-            <ProductCard item={item} key={item.id} />
-          ))}
+      <div className="products-container">
+        <div className="products-section">
+          <h2 className="products-title">Industrial Furnaces</h2>
+          <div className="products-grid">
+            {data.map((item) => (
+              <ProductCard item={item} key={item.id} />
+            ))}
+          </div>
         </div>
       </div>
     </>
@@ -102,34 +120,19 @@ const Products = () => {
 
 const ProductCard = ({ item }) => {
   return (
-    <div className="col-12 col-md-6 col-lg-4 my-3 product-col">
-      <div className="card py-3 px-2 product-card">
-        <LazyLoadComponent>
-          <div className="center furnaceImg p-2">
-            <LazyLoadImage
-              alt={item.title}
-              src={item.img}
-              effect="blur"
-              threshold={100}
-              className="img-fluid p-2 product-img"
-            />
-          </div>
-        </LazyLoadComponent>
-        <div className="card-body product-card-body">
-          <h5 className="card-title center dim product-title">{item.title}</h5>
-
-          <p className="card-text product-text">{item.price}</p>
-          <p className="card-text product-text">{item.material}</p>
-          <p className="card-text product-text">{item.power}</p>
-          <p className="card-text product-text">{item.Loading}</p>
-          <p className="card-text product-text">{item.type}</p>
-          <p className="card-text product-text">{item.temp}</p>
-          <p className="card-text product-text">{item.rated}</p>
-          <p className="card-text product-text">{item.input}</p>
-          <p className="card-text product-text">{item.Consumption}</p>
-          <p className="card-text product-text">{item.automation}</p>
+    <div className="product-card">
+      <LazyLoadComponent>
+        <div className="product-img-container">
+          <LazyLoadImage
+            alt={item.title}
+            src={item.img}
+            effect="blur"
+            threshold={100}
+            className="product-img"
+          />
         </div>
-      </div>
+      </LazyLoadComponent>
+      <h3 className="product-title">{item.title}</h3>
     </div>
   );
 };
