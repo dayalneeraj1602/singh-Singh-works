@@ -6,8 +6,8 @@ const DataProvider = ({ children }) => {
   const dataFurnace = [
     {
       id: 1,
-      img: "https://5.imimg.com/data5/OF/QX/RT/SELLER-36709685/pit-pot-furnace-500x500.jpg",
-      title: "Pit Pot Furnace",
+      img: "https://keramo.in/upload/p/SHUTTLE%20KILN.jpg",
+      title: "Shuttle Klin  Furnaces",
       // price: "Rs 4 Lakhs / Unit",
       // material: "Melting Material : Copper",
       // power: "Power Source : Electric",
@@ -171,8 +171,8 @@ const DataProvider = ({ children }) => {
     },
     {
       id: 13,
-      img: "https://keramo.in/upload/p/SHUTTLE%20KILN.jpg",
-      title: "Shuttle Klin  Furnaces",
+      img: "https://5.imimg.com/data5/OF/QX/RT/SELLER-36709685/pit-pot-furnace-500x500.jpg",
+      title: "Pit Pot Furnace",
       // price: "Rs 7 Lakhs / Unit",
       // material: "Melting Material : Copper",
       // power: "Power Source : Electric",
