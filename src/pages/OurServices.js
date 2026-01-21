@@ -1,11 +1,9 @@
 import React, { useContext, useState } from "react";
-import "../styles/OurServices.css";
 import { Link } from "react-router-dom";
 import { DataContext } from "../Context/DataContext";
 
 const OurServices = () => {
   const { dataServices: dataInfo } = useContext(DataContext);
-  const [hover, setHover] = useState(null);
 
   const serviceIcons = {
     1: "fa-flame",
@@ -15,17 +13,12 @@ const OurServices = () => {
   };
 
   return (
-    <div className="our-services-section">
-      <section className="services-container">
-        <div className="services-header">
-          <span className="services-badge">Our Solutions</span>
-          <h2 className="services-title">Our <span className="highlight-services">Services</span></h2>
-          <p className="services-subtitle">
-            We are committed to providing our clients with the best services and comprehensive industrial solutions.
-          </p>
-        </div>
-
-        <div className="services-grid">
+    <div style={{ minHeight: "100vh", backgroundColor: "#f8f9fa", padding: "2rem 1rem" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", marginTop: "5rem" }}>
+        <h2 style={{ textAlign: "center", fontSize: "2rem", fontWeight: "bold", marginBottom: "3rem", color: "#1a1a2e" }}>
+          Our Services
+        </h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1.5rem", justifyItems: "center" }}>
           {dataInfo?.map((item, index) => (
             <Link
               key={index}
@@ -37,45 +30,90 @@ const OurServices = () => {
                   behavior: "smooth",
                 });
               }}
-              className="service-link"
+              style={{ textDecoration: "none", width: "100%" }}
             >
               <div
-                className="service-card"
-                onMouseLeave={() => setHover(null)}
-                onMouseOver={() => setHover(item.id)}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "12px",
+                  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                  padding: "1.5rem",
+                  maxWidth: "350px",
+                  width: "100%",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  cursor: "pointer",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-5px)";
+                  e.currentTarget.style.boxShadow = "0 8px 12px rgba(59, 130, 246, 0.2)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+                }}
               >
-                <div className="service-image-overlay">
-                  {hover === item.id && (
-                    <div
-                      className="service-bg-image"
+                <div style={{ 
+                  height: "300px", 
+                  width: "100%", 
+                  overflow: "hidden", 
+                  borderRadius: "8px",
+                  backgroundColor: "linear-gradient(135deg, #3b82f6, #1d4ed8)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  position: "relative"
+                }}>
+                  {item.imgUrl ? (
+                    <img
+                      src={item.imgUrl}
+                      alt={item.productTitle}
                       style={{
-                        backgroundImage: `url(${item.imgUrl})`,
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
                       }}
-                    ></div>
-                  )}
-                </div>
-
-                <div className="service-content">
-                  <div className="service-icon-wrapper">
-                    <div className="service-icon">
-                      <i className={`fa-solid ${serviceIcons[item.id] || "fa-star"}`}></i>
-                    </div>
+                      onError={(e) => {
+                        e.target.style.display = "none";
+                      }}
+                    />
+                  ) : null}
+                  <div style={{
+                    position: "absolute",
+                    display: !item.imgUrl ? "flex" : "none",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "100%",
+                    height: "100%",
+                    background: "linear-gradient(135deg, #3b82f6, #1d4ed8)",
+                    fontSize: "3rem",
+                    color: "white"
+                  }}>
+                    <i className={`fa-solid ${serviceIcons[item.id] || "fa-star"}`}></i>
                   </div>
-
-                  <h3 className="service-title">{item.productTitle}</h3>
-                  <p className="service-description">{item.ProductDescription}</p>
-
-                  <div className="service-arrow">
-                    <span>Explore →</span>
-                  </div>
                 </div>
+                <h3 style={{ 
+                  textAlign: "center", 
+                  fontSize: "1.25rem", 
+                  fontWeight: "600", 
+                  marginTop: "1rem",
+                  color: "#333"
+                }}>
+                  {item.productTitle}
+                </h3>
+                <p style={{
+                  textAlign: "center",
+                  fontSize: "0.95rem",
+                  color: "#666",
+                  marginTop: "0.5rem",
+                  lineHeight: "1.5"
+                }}>
+                  {item.ProductDescription}
+                </p>
               </div>
             </Link>
           ))}
         </div>
-      </section>
+      </div>
     </div>
   );
 };
