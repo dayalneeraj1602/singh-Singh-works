@@ -246,7 +246,10 @@ const GearWork = () => {
             Contact us today for a quote or to discuss your specific requirements.
           </p>
           <button
-            onClick={() => navigate("/contact")}
+            onClick={() => {
+              navigate("/contact");
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            }}
             style={{
               backgroundColor: "white",
               color: "#007bff",

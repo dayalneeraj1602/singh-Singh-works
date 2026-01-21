@@ -18,6 +18,7 @@ import Leath from "./pages/Products/Leath";
 
 import MetalToolRoom from "./pages/Products/MetalToolRoom";
 import GearWork from "./pages/Products/GearWork";
+import FurnaceDetail from "./pages/Products/FurnaceDetail";
 
 import SingleProduct from "./pages/SingleProduct";
 
@@ -37,6 +38,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/product/:id" element={<SingleProduct />} />
             <Route path="/services/furnace" element={<Furnace />} />
+            <Route path="/furnace/:id" element={<FurnaceDetail />} />
             <Route path="/services/ceramic_roller" element={<Ceramic />} />
             <Route path="/services/conveyorBelt" element={<Conveyor />} />
             <Route path="/services/MetalToolRoom" element={<MetalToolRoom />} />

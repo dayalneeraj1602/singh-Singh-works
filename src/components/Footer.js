@@ -7,7 +7,7 @@ const Footer = () => {
   )}/`;
 
   return (
-    <footer className="footer py-5">
+    <footer className="footer py-3">
       <div className="container">
         <div className="row justify-content-between">
           <div className="col-md-6 d-flex justify-content-around flex-column">
@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Section */}
-        <div className="row mt-4 pt--4 border-top">
+        <div className="row mt-2 pt-2 border-top">
           <div className="col-12 text-center">
             <p className="mb-0">
               © 2025 The Singh Engineering Works. All Rights Reserved.

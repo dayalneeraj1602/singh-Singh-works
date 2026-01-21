@@ -39,7 +39,7 @@ const ImageGallery = () => {
           <SwiperSlide key={index}>
             <div className="image-wrapper carousel-item">
               <Link
-                to={`/product/${item.id}`}
+                to={`/furnace/${item.id}`}
                 onClick={() =>
                   window.scrollTo({
                     top: 0,

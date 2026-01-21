@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 import {
   LazyLoadComponent,
@@ -9,6 +10,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Products = () => {
   const { dataFurnace: data } = useContext(DataContext);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -119,8 +121,13 @@ const Products = () => {
 };
 
 const ProductCard = ({ item }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="product-card">
+    <div
+      className="product-card"
+      onClick={() => navigate(`/furnace/${item.id}`)}
+    >
       <LazyLoadComponent>
         <div className="product-img-container">
           <LazyLoadImage
