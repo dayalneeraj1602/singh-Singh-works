@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const MetalToolRoom = () => {
+  const navigate = useNavigate();
   const dataInfo = [
     {
       id: 1,
@@ -60,6 +62,11 @@ const MetalToolRoom = () => {
           {dataInfo.map((item) => (
             <div
               key={item.id}
+              onClick={() => {
+                if (item.productTitle === "Gear Work") {
+                  navigate("/services/GearWork");
+                }
+              }}
               style={{
                 backgroundColor: "white",
                 borderRadius: "12px",

@@ -17,6 +17,7 @@ import Conveyor from "./pages/Products/Conveyor";
 import Leath from "./pages/Products/Leath";
 
 import MetalToolRoom from "./pages/Products/MetalToolRoom";
+import GearWork from "./pages/Products/GearWork";
 
 import SingleProduct from "./pages/SingleProduct";
 
@@ -45,6 +46,7 @@ function App() {
             {/* <Route path="/services/dcmotor&panel" element={<DcMotor />} /> */}
             <Route path="/services/leath" element={<Leath />} />
             <Route path="/services/FurnaceParts" element={<FurnaceParts />} />
+            <Route path="/services/GearWork" element={<GearWork />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
