@@ -12,32 +12,32 @@ const ImageGallery = () => {
   const { dataFurnace: data } = useContext(DataContext);
 
   return (
-    <div className="my-5 carousel">
-      <div className="section-head col-sm-12">
-        <h4>
-          <span>Our</span> Products
-        </h4>
-      </div>
+    <div className="products-section">
+      <div className="products-container">
+        <div className="section-header">
+          <span className="section-badge">Premium Selection</span>
+          <h2 className="section-title">Our <span className="highlight">Products</span></h2>
+          <p className="section-subtitle">Explore our comprehensive range of industrial furnaces and heating solutions</p>
+        </div>
 
-      <Swiper
-        modules={[Autoplay]}
-        slidesPerView={4}
-        spaceBetween={30}
-        loop={true}
-        autoplay={{
-          delay: 1800,
-          disableOnInteraction: false,
-        }}
-        breakpoints={{
-          0: { slidesPerView: 1 },
-          576: { slidesPerView: 2 },
-          768: { slidesPerView: 3 },
-          1024: { slidesPerView: 4 },
-        }}
-      >
-        {data?.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="image-wrapper carousel-item">
+        <Swiper
+          modules={[Autoplay]}
+          slidesPerView={4}
+          spaceBetween={30}
+          loop={true}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            0: { slidesPerView: 1, spaceBetween: 20 },
+            576: { slidesPerView: 2, spaceBetween: 20 },
+            768: { slidesPerView: 3, spaceBetween: 25 },
+            1024: { slidesPerView: 4, spaceBetween: 30 },
+          }}
+        >
+          {data?.map((item, index) => (
+            <SwiperSlide key={index}>
               <Link
                 to={`/furnace/${item.id}`}
                 onClick={() =>
@@ -47,31 +47,33 @@ const ImageGallery = () => {
                     behavior: "smooth",
                   })
                 }
-                className="carousel-item-link"
-                style={{ textDecoration: "none" }}
+                className="product-card"
               >
-                <LazyLoadImage
-                  title={item.title}
-                  alt={item.id}
-                  src={item.img}
-                  effect="blur"
-                  threshold={100}
-                  width="250px"
-                  height="250px"
-                  style={{
-                    borderRadius: "12px",
-                    objectFit: "cover",
-                  }}
-                />
+                <div className="product-image-wrapper">
+                  <LazyLoadImage
+                    title={item.title}
+                    alt={item.id}
+                    src={item.img}
+                    effect="blur"
+                    threshold={100}
+                    width="100%"
+                    height="250px"
+                    className="product-image"
+                  />
+                  <div className="product-overlay">
+                    <span className="view-details">View Details →</span>
+                  </div>
+                </div>
 
-                <p className="opacity-25 mt-2">
-                  <b>{item.title}</b>
-                </p>
+                <div className="product-info">
+                  <h3 className="product-title">{item.title}</h3>
+                  <p className="product-label">Industrial Furnace</p>
+                </div>
               </Link>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };

@@ -10,6 +10,7 @@ import Products from "./pages/Products/Furnace";
 import AllProducts from "./components/AllProducts";
 import Furnace from "./pages/Products/Furnace";
 import FurnaceParts from "./pages/Products/FurnaceParts";
+import FurnacePartDetail from "./pages/Products/FurnacePartDetail";
 import Footer from "./components/Footer";
 import Manufacturing from "./pages/Products/Manufacturing";
 import Ceramic from "./pages/Products/Ceramic";
@@ -39,6 +40,7 @@ function App() {
             <Route path="/product/:id" element={<SingleProduct />} />
             <Route path="/services/furnace" element={<Furnace />} />
             <Route path="/furnace/:id" element={<FurnaceDetail />} />
+            <Route path="/furnace-part/:id" element={<FurnacePartDetail />} />
             <Route path="/services/ceramic_roller" element={<Ceramic />} />
             <Route path="/services/conveyorBelt" element={<Conveyor />} />
             <Route path="/services/MetalToolRoom" element={<MetalToolRoom />} />

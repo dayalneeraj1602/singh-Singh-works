@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const FurnaceParts = () => {
+  const navigate = useNavigate();
   const dataInfo = [
     {
       id: 1,
@@ -97,6 +99,7 @@ const FurnaceParts = () => {
           {dataInfo.map((item) => (
             <div
               key={item.id}
+              onClick={() => navigate(`/furnace-part/${item.id}`)}
               style={{
                 backgroundColor: "white",
                 borderRadius: "12px",

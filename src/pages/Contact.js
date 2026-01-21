@@ -63,7 +63,7 @@ const Contact = () => {
           <div className="contact-info">
             <div className="top">
               <h3 className="title">Let's get in touch</h3>
-              <p className="text">Feel free to leave a message.</p>
+              <p className="text">We'd love to hear from you. Send us a message!</p>
             </div>
 
             <div className="bottom">
@@ -71,7 +71,7 @@ const Contact = () => {
                 <div className="information">
                   <i className="fa-solid fa-location-dot me-2"></i>
                   <span className="info-text">
-                    B-16, B Block, Sector 64, Noida Sector 64, Noida – 201301
+                    B-16, B Block, Sector 64, Noida – 201301
                   </span>
                 </div>
                 <div className="information-email">
@@ -103,16 +103,16 @@ const Contact = () => {
               <div className="social-media">
                 <p>Connect with us :</p>
                 <div className="social-icons">
-                  <a href="#">
+                  <a href="#" aria-label="Facebook">
                     <i className="fab fa-facebook-f"></i>
                   </a>
-                  <a href="#">
+                  <a href="#" aria-label="Twitter">
                     <i className="fab fa-twitter"></i>
                   </a>
-                  <a href="#">
+                  <a href="#" aria-label="Instagram">
                     <i className="fab fa-instagram"></i>
                   </a>
-                  <a href="#">
+                  <a href="#" aria-label="LinkedIn">
                     <i className="fab fa-linkedin-in"></i>
                   </a>
                 </div>
@@ -172,6 +172,7 @@ const Contact = () => {
                 <textarea
                   name="message"
                   className="input"
+                  placeholder="Your message..."
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.message}

@@ -6,10 +6,7 @@ import WhyUs from "./WhyUs";
 import { Link } from "react-router-dom";
 import OurServices from "./OurServices";
 
-export const info = ` Est. 2001, Singh Engineering Works in Noida crafts quality
-Industrial Furnaces. As a Sole Proprietorship, we prioritize
-standards, offering competitive rates. Led by Prabhudayal Singh,
-we've secured a strong market position.`;
+export const info = `Established in 2001, Singh Engineering Works is a leader in precision industrial furnaces. We deliver cutting-edge heating solutions with uncompromising quality standards.`;
 
 const Home = () => {
   const [infoText, setInfoText] = useState("");
@@ -24,7 +21,7 @@ const Home = () => {
           setInfoText(info);
         }
       }
-    }, 6);
+    }, 5);
 
     return () => clearTimeout(intervalId);
   }, [infoText]);
@@ -33,20 +30,25 @@ const Home = () => {
     <div className="home">
       <section className="banner">
         <div className="overlay"></div>
+        <div className="banner-content">
+          <div className="punch-line">
+            <div className="badge">Industry Leader Since 2001</div>
+            <h1 className="headline">Premium Industrial Furnace Solutions</h1>
+            <p className="info">{infoText}</p>
 
-        <div className="punch-line">
-          <h1 className="headline">Innovating Furnaces</h1>
-          <h1 className="headline since">Since 2001.</h1>
+            <div className="cta-buttons">
+              <Link to="/products" style={{ textDecoration: "none" }}>
+                <button className="btn-primary">Explore Products</button>
+              </Link>
+              <Link to="/contact" style={{ textDecoration: "none" }}>
+                <button className="btn-secondary">Get in Touch</button>
+              </Link>
+            </div>
 
-          <p className="info text-start">{infoText}</p>
-
-          <div className="Explore">
-            <Link
-              to="/products"
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
-              <button className="btn fs-5 btn-outline-light">Explore</button>
-            </Link>
+            <div className="scroll-indicator">
+              <span>Scroll to explore</span>
+              <div className="scroll-arrow">↓</div>
+            </div>
           </div>
         </div>
       </section>
