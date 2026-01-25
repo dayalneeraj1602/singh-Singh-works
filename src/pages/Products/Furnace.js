@@ -10,7 +10,6 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Products = () => {
   const { dataFurnace: data } = useContext(DataContext);
-  const navigate = useNavigate();
 
   return (
     <>
@@ -271,9 +270,12 @@ const Products = () => {
         <div className="products-section">
           <div className="products-header">
             <span className="products-badge">Industrial Solutions</span>
-            <h2 className="products-title">Industrial <span className="highlight">Furnaces</span></h2>
+            <h2 className="products-title">
+              Industrial <span className="highlight">Furnaces</span>
+            </h2>
             <p className="products-subtitle">
-              Precision-engineered furnace systems designed for optimal performance and reliability in demanding industrial applications.
+              Precision-engineered furnace systems designed for optimal
+              performance and reliability in demanding industrial applications.
             </p>
           </div>
           <div className="products-grid">
